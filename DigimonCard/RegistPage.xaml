@@ -28,7 +28,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="230,358,0,0" TextWrapping="Wrap" Text="注册密码：" VerticalAlignment="Top" Height="57" Width="217" FontSize="36"/>
             <Button Content="注册" HorizontalAlignment="Left" Margin="364,585,0,0" VerticalAlignment="Top" Width="277" Height="81" FontSize="36" Click="Button_Click"/>
             <Button x:Name="regist_Back" Content="返回" HorizontalAlignment="Left" Margin="944,585,0,0" VerticalAlignment="Top" Width="284" Height="81" FontSize="36" Click="Button_Click_1"/>
-            <Image x:Name="regist_image" HorizontalAlignment="Left" Height="270.255" Margin="817.079,50.037,0,0" VerticalAlignment="Top" Width="383.991" Source="MyImage/regist.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Image x:Name="regist_image" HorizontalAlignment="Left" Height="270.255" Margin="817.079,50.037,0,0" VerticalAlignment="Top" Width="383.991" Source="Images/regist.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Image.RenderTransform>
                     <CompositeTransform Rotation="-19.163"/>
                 </Image.RenderTransform>

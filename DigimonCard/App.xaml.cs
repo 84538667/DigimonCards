@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DigimonCard.Common;
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// “空白应用程序”模板在 http://go.microsoft.com/fwlink/?LinkId=234227 上有介绍
+// “网格应用程序”模板在 http://go.microsoft.com/fwlink/?LinkId=234226 上有介绍
 
 namespace DigimonCard
 {
@@ -39,32 +41,43 @@ namespace DigimonCard
         /// 将使用其他入口点。
         /// </summary>
         /// <param name="args">有关启动请求和过程的详细信息。</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
+        protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
             // 不要在窗口已包含内容时重复应用程序初始化，
             // 只需确保窗口处于活动状态
+            
             if (rootFrame == null)
             {
                 // 创建要充当导航上下文的框架，并导航到第一页
                 rootFrame = new Frame();
+                //将框架与 SuspensionManager 键关联                                
+                SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    //TODO: 从之前挂起的应用程序加载状态
+                    // 仅当合适时才还原保存的会话状态
+                    try
+                    {
+                        await SuspensionManager.RestoreAsync();
+                    }
+                    catch (SuspensionManagerException)
+                    {
+                        //还原状态时出现问题。
+                        //假定没有状态并继续
+                    }
                 }
 
                 // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;
             }
-
             if (rootFrame.Content == null)
             {
                 // 当未还原导航堆栈时，导航到第一页，
                 // 并通过将所需信息作为导航参数传入来配置
-                // 参数
-                if (!rootFrame.Navigate(typeof(MainPage), args.Arguments))
+                // 新页
+                if (!rootFrame.Navigate(typeof(LoginPage), "AllGroups"))
                 {
                     throw new Exception("Failed to create initial page");
                 }
@@ -80,10 +93,10 @@ namespace DigimonCard
         /// </summary>
         /// <param name="sender">挂起的请求的源。</param>
         /// <param name="e">有关挂起的请求的详细信息。</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: 保存应用程序状态并停止任何后台活动
+            await SuspensionManager.SaveAsync();
             deferral.Complete();
         }
     }

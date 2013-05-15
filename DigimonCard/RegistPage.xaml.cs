@@ -44,7 +44,7 @@ namespace DigimonCard
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(LoginPage));
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -116,6 +116,6 @@ namespace DigimonCard
              */
         }
 
-       
+
     }
 }

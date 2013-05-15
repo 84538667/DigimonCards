@@ -1,1 +1,1 @@
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\DigimonCard.csproj;neutral
+f:\users\王永淳\documents\visual studio 2012\Projects\DigimonCard\DigimonCard\DigimonCard.csproj;neutral

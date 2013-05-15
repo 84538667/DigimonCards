@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
-  <Identity Name="1d9ec042-7b5b-4d17-85a7-a62f2611774d"
-            Publisher="CN=test"
+  <Identity Name="48eab4b4-ee81-4fee-9b39-7234f721eff6"
+            Publisher="CN=bug忘忧草"
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>DigimonCard</DisplayName>
-    <PublisherDisplayName>test</PublisherDisplayName>
+    <PublisherDisplayName>bug忘忧草</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B8498D0-93DD-49CD-B7E1-AC02DBBC4FB5}</ProjectGuid>
+    <ProjectGuid>{EA1EA3E9-B1A6-4C0C-AE0D-856707623BDB}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DigimonCard</RootNamespace>
@@ -12,6 +12,7 @@
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>DigimonCard_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -100,64 +101,96 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="MyImage\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="cards\AttractCard.cs" />
-    <Compile Include="Net.cs" />
-    <Compile Include="RegistPage.xaml.cs">
-      <DependentUpon>RegistPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Deck.cs" />
+    <Compile Include="GameLobbyPage.xaml.cs">
+      <DependentUpon>GameLobbyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Net.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="cards\TacticsCards.cs" />
-    <Compile Include="WaitingRoom.xaml.cs">
-      <DependentUpon>WaitingRoom.xaml</DependentUpon>
+    <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="RegistPage.xaml.cs">
+      <DependentUpon>RegistPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoomCard.xaml.cs">
+      <DependentUpon>RoomCard.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Common\ReadMe.txt" />
+    <None Include="DigimonCard_TemporaryKey.pfx" />
+    <None Include="Images\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
-    <Content Include="MyImage\login_bkg.jpg" />
-    <Content Include="MyImage\mylogo.png" />
-    <Content Include="MyImage\regist.png" />
-    <Content Include="MyImage\title.png" />
-    <Content Include="MyMusic\loggin.mp3" />
-    <Content Include="MyMusic\数码宝贝OL音乐2（流畅）.mp3" />
-    <Content Include="MyMusic\数码宝贝OL音乐3（流畅）.mp3" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <Content Include="Images\cube-room.jpg" />
+    <Content Include="Images\login_bkg.jpg" />
+    <Content Include="Images\mylogo.png" />
+    <Content Include="Images\newRoomBtn.png" />
+    <Content Include="Images\newRoomBtn_click.png" />
+    <Content Include="Images\quickJoinBtn.png" />
+    <Content Include="Images\quickJoinBtn_click.png" />
+    <Content Include="Images\regist.png" />
+    <Content Include="Images\room.png" />
+    <Content Include="Images\sunshine-twitter-background.jpg" />
+    <Content Include="Images\title.png" />
+    <Content Include="Images\WaitingRoom_bkg.jpg" />
+    <Content Include="Musics\loggin.mp3" />
+    <Content Include="Musics\数码宝贝OL音乐2（流畅）.mp3" />
+    <Content Include="Musics\数码宝贝OL音乐3（流畅）.mp3" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="RegistPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Common\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="LoginPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="GameLobbyPage.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WaitingRoom.xaml">
+    <Page Include="GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoomCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

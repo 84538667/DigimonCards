@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="DigimonCard.MainPage"
+    x:Class="DigimonCard.LoginPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DigimonCard"
@@ -9,7 +9,7 @@
 
     <Grid Opacity="0.8">
         <Grid.Background>
-            <ImageBrush ImageSource="MyImage/login_bkg.jpg"/>
+            <ImageBrush ImageSource= "Images/login_bkg.jpg"/>
         </Grid.Background>
         <TextBox HorizontalAlignment="Left" Margin="782,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Opacity="0.2" Visibility="Collapsed"/>
         <TextBox x:Name="player_name" HorizontalAlignment="Left" Margin="269,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="#FF0DCBDE" Height="45" FontSize="22"/>
@@ -21,10 +21,10 @@
         	<Run Text="密码"/>
         	<Run Text=":"/>
         </TextBlock>
-        <Image HorizontalAlignment="Left" Height="267" Margin="363,285,0,0" VerticalAlignment="Top" Width="677" Source="MyImage/title.png"/>
+        <Image HorizontalAlignment="Left" Height="267" Margin="363,285,0,0" VerticalAlignment="Top" Width="677" Source="Images/title.png"/>
         <Button x:Name="player_regist" Content="没有注册的亲们，请猛戳这里！！&#xD;&#xA;" HorizontalAlignment="Left" Margin="126,632,0,0" VerticalAlignment="Top" Width="467" FontSize="20" Height="52" Click="player_regist_Click"/>
         <Button Content="登陆" HorizontalAlignment="Left" Margin="664,430,0,0" VerticalAlignment="Top" Width="148" Height="76" FontSize="36" Click="Button_Click"/>
-        <MediaElement HorizontalAlignment="Left" Height="52" Margin="664,632,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5" Source="MyMusic/loggin.mp3" Volume="0.5"/>
+        <MediaElement HorizontalAlignment="Left" Height="52" Margin="664,632,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5" Source="Musics/loggin.mp3" Volume="0.5"/>
         <PasswordBox x:Name="player_pwd" HorizontalAlignment="Left" Margin="269,502,0,0" VerticalAlignment="Top" Width="304" Height="46" RenderTransformOrigin="0.487,0.46" Background="#FF21D9E2"/>
 
 

@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="DigimonCard.RoomCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigimonCard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="312.94" Width="238.806">
+
+    <Grid x:ConnectionId='1' Margin="10"                          >
+        <Grid x:FieldModifier="Public" x:Name="ClickBox" HorizontalAlignment="Left" Height="302" Margin="-3,-6,-2,-3" VerticalAlignment="Top" Width="220" Background="#FF0051FF" Opacity="0.8" Visibility="Collapsed"/>
+
+        <Image x:Name="HostPhoto" HorizontalAlignment="Left" Height="54" Margin="27,67,0,0" VerticalAlignment="Top" Width="57"/>
+        <Image x:ConnectionId='2' x:Name="ChallengerPhoto" HorizontalAlignment="Left" Height="54" Margin="149,195,0,0" VerticalAlignment="Top" Width="57"                                />
+        <Image HorizontalAlignment="Left" Height="293" Margin="6,-1,0,0" VerticalAlignment="Top" Width="209" Source="Images/room.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="128,0,0,270" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="20" Width="45" Foreground="Black" Text="房间" FontSize="18" FontWeight="Bold" FontFamily="Arial Black" TextAlignment="Center"/>
+        <TextBlock x:Name="roomNum" HorizontalAlignment="Left" Margin="175,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="31" FontSize="18" FontFamily="Arial Black" TextAlignment="Center" Foreground="Black"/>
+
+    </Grid>
+</UserControl>
+

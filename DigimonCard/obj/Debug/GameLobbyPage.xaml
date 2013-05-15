@@ -1,0 +1,106 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="DigimonCard.GameLobbyPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigimonCard"
+    xmlns:common="using:DigimonCard.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Style="{StaticResource LayoutRootStyle}">
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/cube-room.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Canvas x:Name="roomArea" HorizontalAlignment="Left" Height="470" VerticalAlignment="Top" Width="1154" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="114,10,0,0">
+            <MediaElement Height="54" Canvas.Left="-100" Canvas.Top="292" Width="63" Source="Musics/数码宝贝OL音乐3（流畅）.mp3"/>
+        </Canvas>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='6' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1123,16,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" Text="游戏大厅" VerticalAlignment="Top" Height="50" Width="155" FontSize="36" FontWeight="Bold"/>
+        </Grid>
+        <Image x:ConnectionId='1' x:Name="newRoomBtn" HorizontalAlignment="Left" Height="66" Margin="942,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Source="Images/newRoomBtn.png"                                                                           Stretch="Fill" Visibility="Collapsed"/>
+        <Image x:ConnectionId='2' x:Name="QuickJoinBtn" HorizontalAlignment="Left" Height="61" Margin="1114,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Source="Images/quickJoinBtn.png" Stretch="Fill"                                                                              />
+        <Button x:ConnectionId='3' Content="上一页" HorizontalAlignment="Left" Margin="898,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"                           Background="#FFFF8B00"/>
+        <Button x:ConnectionId='4' Content="下一页" HorizontalAlignment="Left" Margin="1002,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"                           Background="#FFFF8B00"/>
+        <ComboBox x:ConnectionId='5' x:Name="pageBox" HorizontalAlignment="Left" Margin="772,493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" FontSize="16" FontWeight="Bold" Background="#CCFFFFFF" BorderBrush="#CC000000" Foreground="Black"                               >
+            <ComboBoxItem Content="第1页" Foreground="Black"/>
+            <ComboBoxItem Content="第2页" Foreground="Black"/>
+            <ComboBoxItem Content="第3页" Foreground="Black"/>
+            <ComboBoxItem Content="第4页" Foreground="Black"/>
+            <ComboBoxItem Content="第5页" Foreground="Black"/>
+            <ComboBoxItem Content="第6页" Foreground="Black"/>
+            <ComboBoxItem Content="第7页" Foreground="Black"/>
+            <ComboBoxItem Content="第8页" Foreground="Black"/>
+            <ComboBoxItem Content="第9页" Foreground="Black"/>
+            <ComboBoxItem Content="第10页" Foreground="Black"/>
+            <ComboBoxItem Content="第11页" Foreground="Black"/>
+            <ComboBoxItem Content="第12页" Foreground="Black"/>
+            <ComboBoxItem Content="第13页" Foreground="Black"/>
+            <ComboBoxItem Content="第14页" Foreground="Black"/>
+            <ComboBoxItem Content="第15页" Foreground="Black"/>
+            <ComboBoxItem Content="第16页" Foreground="Black"/>
+            <ComboBoxItem Content="第17页" Foreground="Black"/>
+            <ComboBoxItem Content="第18页" Foreground="Black"/>
+            <ComboBoxItem Content="第19页" Foreground="Black"/>
+            <ComboBoxItem Content="第20页" Foreground="Black"/>
+            <ComboBoxItem Content="第21页" Foreground="Black"/>
+            <ComboBoxItem Content="第22页" Foreground="Black"/>
+            <ComboBoxItem Content="第23页" Foreground="Black"/>
+            <ComboBoxItem Content="第24页" Foreground="Black"/>
+            <ComboBoxItem Content="第25页" Foreground="Black"/>
+        </ComboBox>
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <!-- The back button and title have different styles when snapped -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</common:LayoutAwarePage>
+
