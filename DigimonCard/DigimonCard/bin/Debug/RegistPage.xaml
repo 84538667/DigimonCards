@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="DigimonCard.RegistPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigimonCard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="364,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="609" FontSize="48">
+			<Run Text="欢迎来到注册"/>
+			<Run Text="界"/>
+			<Run Text="面"/>
+			<Run Text="o(∩_∩)o"/>
+			<Run Text="~"/>
+        </TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="597,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" Height="62" FontSize="36" FontStyle="Italic"/>
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock HorizontalAlignment="Left" Margin="209,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="83" Width="609" FontSize="48">
+            	<Run Text="欢迎来到注册"/>
+            	<Run Text="界"/>
+            	<Run Text="面"/>
+            	<Run Text="~"/>
+            </TextBlock>
+            <TextBox x:ConnectionId='1' x:Name="regist_name" HorizontalAlignment="Left" Margin="530,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" Height="62" FontSize="36" FontStyle="Italic"                                        />
+            <TextBlock HorizontalAlignment="Left" Margin="230,219,0,0" TextWrapping="Wrap" Text="用户名：" VerticalAlignment="Top" Height="62" Width="169" FontSize="36"/>
+            <TextBlock HorizontalAlignment="Left" Margin="230,358,0,0" TextWrapping="Wrap" Text="注册密码：" VerticalAlignment="Top" Height="57" Width="217" FontSize="36"/>
+            <Button x:ConnectionId='2' Content="注册" HorizontalAlignment="Left" Margin="364,585,0,0" VerticalAlignment="Top" Width="277" Height="81" FontSize="36"                     />
+            <Button x:ConnectionId='3' x:Name="regist_Back" Content="返回" HorizontalAlignment="Left" Margin="944,585,0,0" VerticalAlignment="Top" Width="284" Height="81" FontSize="36"                       />
+            <Image x:Name="regist_image" HorizontalAlignment="Left" Height="270.255" Margin="817.079,50.037,0,0" VerticalAlignment="Top" Width="383.991" Source="Images/regist.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-19.163"/>
+                </Image.RenderTransform>
+            </Image>
+            <TextBlock HorizontalAlignment="Left" Margin="230,496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="192" FontSize="36">
+            	<Run Text="确认密码"/>
+            	<Run Text="："/>
+            </TextBlock>
+            <PasswordBox x:Name="regist_pwd" HorizontalAlignment="Left" Margin="530,358,0,0" VerticalAlignment="Top" Width="564" Height="70"/>
+            <PasswordBox x:Name="confirm_pwd" HorizontalAlignment="Left" Margin="530,481,0,0" VerticalAlignment="Top" Width="564" Height="62"/>
+        </Grid>
+
+    </Grid>
+</Page>
+

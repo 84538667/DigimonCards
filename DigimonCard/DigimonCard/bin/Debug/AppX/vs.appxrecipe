@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LHC-PC</Machine>
+    <WindowsUser>lhc</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>CBD0204AA005F12E2C126BA102FA536A74F28A7A9C2D7B59FB7A69278C905C76</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>1d9ec042-7b5b-4d17-85a7-a62f2611774d_1.0.0.0_neutral__yps17xarsp2at</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>1d9ec042-7b5b-4d17-85a7-a62f2611774d_yps17xarsp2at!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>1d9ec042-7b5b-4d17-85a7-a62f2611774d</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=test</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-16T10:43:55.145</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\DigimonCard.exe">
+      <PackagePath>DigimonCard.exe</PackagePath>
+      <Modified>2013-05-16T10:51:24.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\DigimonCard.pdb">
+      <PackagePath>DigimonCard.pdb</PackagePath>
+      <Modified>2013-05-16T10:51:24.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2013-05-16T10:31:24.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2013-05-16T10:31:24.434</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2013-05-16T10:31:26.158</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-04-02T15:39:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\mylogo.png">
+      <PackagePath>Images\mylogo.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\newRoomBtn.png">
+      <PackagePath>Images\newRoomBtn.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.244</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\newRoomBtn_click.png">
+      <PackagePath>Images\newRoomBtn_click.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.246</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\quickJoinBtn.png">
+      <PackagePath>Images\quickJoinBtn.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.247</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\quickJoinBtn_click.png">
+      <PackagePath>Images\quickJoinBtn_click.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\regist.png">
+      <PackagePath>Images\regist.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\room.png">
+      <PackagePath>Images\room.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.254</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\title.png">
+      <PackagePath>Images\title.png</PackagePath>
+      <Modified>2013-05-16T10:40:28.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2013-05-16T10:29:01.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\cube-room.jpg">
+      <PackagePath>Images\cube-room.jpg</PackagePath>
+      <Modified>2013-05-16T10:40:28.239</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\login_bkg.jpg">
+      <PackagePath>Images\login_bkg.jpg</PackagePath>
+      <Modified>2013-05-16T10:40:28.241</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\sunshine-twitter-background.jpg">
+      <PackagePath>Images\sunshine-twitter-background.jpg</PackagePath>
+      <Modified>2013-05-16T10:40:28.256</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Images\WaitingRoom_bkg.jpg">
+      <PackagePath>Images\WaitingRoom_bkg.jpg</PackagePath>
+      <Modified>2013-05-16T10:40:28.264</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Musics\loggin.mp3">
+      <PackagePath>Musics\loggin.mp3</PackagePath>
+      <Modified>2013-05-16T10:40:33.791</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Musics\数码宝贝OL音乐2（流畅）.mp3">
+      <PackagePath>Musics\数码宝贝OL音乐2（流畅）.mp3</PackagePath>
+      <Modified>2013-05-16T10:40:33.832</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\Musics\数码宝贝OL音乐3（流畅）.mp3">
+      <PackagePath>Musics\数码宝贝OL音乐3（流畅）.mp3</PackagePath>
+      <Modified>2013-05-16T10:40:33.896</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-05-10T02:07:06.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\GameLobbyPage.xaml">
+      <PackagePath>GameLobbyPage.xaml</PackagePath>
+      <Modified>2013-05-16T10:47:07.623</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\GamePage.xaml">
+      <PackagePath>GamePage.xaml</PackagePath>
+      <Modified>2013-05-15T00:46:01.436</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\RegistPage.xaml">
+      <PackagePath>RegistPage.xaml</PackagePath>
+      <Modified>2013-05-16T10:42:07.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-05-16T10:43:34.342</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\LoginPage.xaml">
+      <PackagePath>LoginPage.xaml</PackagePath>
+      <Modified>2013-05-16T10:41:23.435</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\RoomCard.xaml">
+      <PackagePath>RoomCard.xaml</PackagePath>
+      <Modified>2013-05-16T10:25:46.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\WaitingRoom.xaml">
+      <PackagePath>WaitingRoom.xaml</PackagePath>
+      <Modified>2013-05-12T15:28:46.316</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-05-16T10:43:55.012</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
