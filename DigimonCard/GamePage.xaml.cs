@@ -12,41 +12,65 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
+// “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上有介绍
 
 namespace DigimonCard
 {
     /// <summary>
-    /// 基本页，提供大多数应用程序通用的特性。
+    /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class GamePage : DigimonCard.Common.LayoutAwarePage
+    public sealed partial class GamePage : Page
     {
         public GamePage()
         {
             this.InitializeComponent();
+            this.Init();
         }
 
+        private void Init()
+        {
+            Player player1 = new Player("string", 1, 1, 1, 1, 1, null, null);
+            Player player2 = new Player("string", 1, 1, 1, 1, 1, null, null);
+
+            String p1Name = player1.GetName();
+            String p2Name = player2.GetName();
+
+            int p1Hp = player1.GetHp();
+            int p2Hp = player2.GetHp();
+
+            Deck p1Deck = new Deck(player1.GetCardsUsed());
+            Deck p2Deck = new Deck(player2.GetCardsUsed());
+
+            p1Deck.Init();
+            p2Deck.Init();
+
+            AttractCards[] p1HandCards = new AttractCards[5];
+            AttractCards[] p2HandCards = new AttractCards[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                p1HandCards[i] = p1Deck.GetFirstCard();
+                p2HandCards[i] = p2Deck.GetFirstCard();
+            }
+
+        }
         /// <summary>
-        /// 使用在导航过程中传递的内容填充页。在从以前的会话
-        /// 重新创建页时，也会提供任何已保存状态。
+        /// 在此页将要在 Frame 中显示时进行调用。
         /// </summary>
-        /// <param name="navigationParameter">最初请求此页时传递给
-        /// <see cref="Frame.Navigate(Type, Object)"/> 的参数值。
-        /// </param>
-        /// <param name="pageState">此页在以前会话期间保留的状态
-        /// 字典。首次访问页面时为 null。</param>
-        protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
+        /// <param name="e">描述如何访问此页的事件数据。Parameter
+        /// 属性通常用于配置页。</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
 
-        /// <summary>
-        /// 保留与此页关联的状态，以防挂起应用程序或
-        /// 从导航缓存中放弃此页。值必须符合
-        /// <see cref="SuspensionManager.SessionState"/> 的序列化要求。
-        /// </summary>
-        /// <param name="pageState">要使用可序列化状态填充的空字典。</param>
-        protected override void SaveState(Dictionary<String, Object> pageState)
-        {
-        }
+        /*onclick(){
+         *   应该是点击之后处理操作并，发送信息给服务器
+         *   服务器收到信息之后广播
+         *   然后设置一个接受的receiver 等待服务器信息
+         *   服务器返回信息之后则改变状态
+         *   
+        }*/
+
+
     }
 }

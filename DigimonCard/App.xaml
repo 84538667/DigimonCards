@@ -2,8 +2,7 @@
     x:Class="DigimonCard.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:DigimonCard"
-    xmlns:localData="using:DigimonCard.Data">
+    xmlns:local="using:DigimonCard">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -16,9 +15,6 @@
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <!-- 应用程序特定的资源-->
-
-            <x:String x:Key="AppName">DigimonCard</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

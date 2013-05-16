@@ -44,7 +44,7 @@ namespace DigimonCard
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(LoginPage));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -66,12 +66,12 @@ namespace DigimonCard
             else
             {
                 //异步登陆函数
-                regist(nname, npwd);
+                Regist(nname, npwd);
             }
         }
 
         //异步登陆函数，用来执行检察用户名密码是否正确
-        public async void regist(String username, String pwd)
+        public async void Regist(String username, String pwd)
         {
             //服务器url地址
             Uri url = new Uri("http://service.twtstudio.com/phone/android/gpa.php");
@@ -116,6 +116,6 @@ namespace DigimonCard
              */
         }
 
-
+       
     }
 }

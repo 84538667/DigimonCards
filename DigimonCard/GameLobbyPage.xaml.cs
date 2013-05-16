@@ -46,6 +46,8 @@ namespace DigimonCard
                 }
             for (int i = 4; i < 100; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
+            this.pageBox.SelectedIndex = currentPageNum - 1;
         }
 
         /// <summary>
@@ -132,6 +134,7 @@ namespace DigimonCard
                 for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
             }
+            this.pageBox.SelectedIndex = currentPageNum - 1;
         }
 
         private void nextPageBtn_click(object sender, RoutedEventArgs e)
@@ -145,6 +148,8 @@ namespace DigimonCard
 
                 for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+                this.pageBox.SelectedIndex = currentPageNum - 1;
             }
         }
 
@@ -157,6 +162,8 @@ namespace DigimonCard
 
             for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+            this.pageBox.SelectedIndex = currentPageNum - 1;
         }
 
 

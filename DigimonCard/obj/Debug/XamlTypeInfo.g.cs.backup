@@ -118,11 +118,13 @@ namespace DigimonCard.DigimonCard_XamlTypeInfo
 
         private object Activate_2_GamePage() { return new global::DigimonCard.GamePage(); }
 
-        private object Activate_3_LoginPage() { return new global::DigimonCard.LoginPage(); }
+        private object Activate_3_RegistPage() { return new global::DigimonCard.RegistPage(); }
 
-        private object Activate_4_RegistPage() { return new global::DigimonCard.RegistPage(); }
+        private object Activate_4_MainPage() { return new global::DigimonCard.MainPage(); }
 
         private object Activate_5_RoomCard() { return new global::DigimonCard.RoomCard(); }
+
+        private object Activate_6_WaitingRoom() { return new global::DigimonCard.WaitingRoom(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -153,26 +155,32 @@ namespace DigimonCard.DigimonCard_XamlTypeInfo
                 break;
 
             case "DigimonCard.GamePage":
-                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.GamePage), GetXamlTypeByName("DigimonCard.Common.LayoutAwarePage"));
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.GamePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_2_GamePage;
-                xamlType = userType;
-                break;
-
-            case "DigimonCard.LoginPage":
-                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.LoginPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_LoginPage;
                 xamlType = userType;
                 break;
 
             case "DigimonCard.RegistPage":
                 userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.RegistPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_RegistPage;
+                userType.Activator = Activate_3_RegistPage;
+                xamlType = userType;
+                break;
+
+            case "DigimonCard.MainPage":
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
                 xamlType = userType;
                 break;
 
             case "DigimonCard.RoomCard":
                 userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.RoomCard), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_5_RoomCard;
+                xamlType = userType;
+                break;
+
+            case "DigimonCard.WaitingRoom":
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.WaitingRoom), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_WaitingRoom;
                 xamlType = userType;
                 break;
 

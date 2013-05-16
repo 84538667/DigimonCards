@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="DigimonCard.LoginPage"
+    x:Class="DigimonCard.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DigimonCard"
@@ -9,7 +9,7 @@
 
     <Grid Opacity="0.8">
         <Grid.Background>
-            <ImageBrush ImageSource= "Images/login_bkg.jpg"/>
+            <ImageBrush ImageSource="Images/login_bkg.jpg"/>
         </Grid.Background>
         <TextBox HorizontalAlignment="Left" Margin="782,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Opacity="0.2" Visibility="Collapsed"/>
         <TextBox x:Name="player_name" HorizontalAlignment="Left" Margin="269,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Background="#FF0DCBDE" Height="45" FontSize="22"/>
