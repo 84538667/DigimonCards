@@ -22,12 +22,12 @@ namespace DigimonCard
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LoginPage : Page
     {
         private String pname;
         private String ppwd;
         private String resBody = "1";
-        public MainPage()
+        public LoginPage()
         {
             this.InitializeComponent();
         }
@@ -55,8 +55,8 @@ namespace DigimonCard
         //登陆Button点击事件
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(GameLobbyPage));
-            /*pname = this.player_name.Text;
+            //this.Frame.Navigate(typeof(GameLobbyPage));
+            pname = this.player_name.Text;
             ppwd = this.player_pwd.Password;
 
             if (!pname.Equals("") && !ppwd.Equals(""))
@@ -68,20 +68,20 @@ namespace DigimonCard
             {
                 MessageDialog md = new MessageDialog("请输入用户名/密码", "错误");
                 await md.ShowAsync();
-            }*/
+            }
         }
 
         //异步登陆函数，用来执行检察用户名密码是否正确
-        public async void Login(String username, String pwd)
+        public async void Login(String username, String password)
         {
             
             //服务器url地址
-            Uri url = new Uri("http://service.twtstudio.com/phone/android/gpa.php");
+            Uri url = new Uri("http://168.63.151.29:3000/login/");
             //post请求键值对
             HttpContent con =  new FormUrlEncodedContent(new Dictionary<string, string>()
             {
                 {"username", username},
-                {"pwd", pwd}    
+                {"password", password}    
             });
             try
             {
@@ -112,10 +112,20 @@ namespace DigimonCard
 
         //处理获得的数据，此处应根据账号密码是否正确来判断跳转或者是重新输入
         
-        private void Handle(string resBody)
+        private async void Handle(string resBody)
         {
             this.player_name.Text = resBody;
-            //Frame.Navigate(typeof(WaitingRoom));
+
+            if (resBody.Equals("success"))
+            {
+                Frame.Navigate(typeof(GameLobbyPage));
+            }
+            else
+            {
+               MessageDialog md = new MessageDialog("用户名/密码错误", "错误");
+               await md.ShowAsync();
+            }
+            
         }
     }
 

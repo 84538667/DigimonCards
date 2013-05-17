@@ -23,7 +23,7 @@
             	<Run Text="面"/>
             	<Run Text="~"/>
             </TextBlock>
-            <TextBox x:Name="regist_name" HorizontalAlignment="Left" Margin="530,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" Height="62" FontSize="36" FontStyle="Italic" TextChanged="register_Name_TextChanged"/>
+            <TextBox x:Name="regist_name" HorizontalAlignment="Left" Margin="530,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" Height="62" FontSize="36" FontStyle="Italic" />
             <TextBlock HorizontalAlignment="Left" Margin="230,219,0,0" TextWrapping="Wrap" Text="用户名：" VerticalAlignment="Top" Height="62" Width="169" FontSize="36"/>
             <TextBlock HorizontalAlignment="Left" Margin="230,358,0,0" TextWrapping="Wrap" Text="注册密码：" VerticalAlignment="Top" Height="57" Width="217" FontSize="36"/>
             <Button Content="注册" HorizontalAlignment="Left" Margin="364,585,0,0" VerticalAlignment="Top" Width="277" Height="81" FontSize="36" Click="Button_Click"/>
