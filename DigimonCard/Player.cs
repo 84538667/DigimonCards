@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DigimonCard
 {
+
+    //需要创建一个静态class
+    //搞一个静态player表示自己，方便在各个class传递这个乱七八糟的参数。
     class Player
     {
         private int hp;
@@ -34,9 +37,19 @@ namespace DigimonCard
             return hp;
         }
 
+        public void SetHp( int hp )
+        {
+            this.hp = hp;
+        }
+
         public String GetName()
         {
             return name;
+        }
+
+        public void SetName(String name)
+        {
+            this.name = name;
         }
 
         public int GetTotalTimes()
@@ -44,9 +57,19 @@ namespace DigimonCard
             return totalTimes;
         }
 
+        public void SetTotalTimes(int tt)
+        {
+            this.totalTimes = tt;
+        }
+
         public int GetWinTimes()
         {
             return winTimes;
+        }
+
+        public void SetWinTimes(int wt)
+        {
+            this.winTimes = wt;
         }
 
         public int GetLoseTimes()
@@ -54,14 +77,29 @@ namespace DigimonCard
             return loseTimes;
         }
 
+        public void SetLoseTimes(int lt)
+        {
+            this.loseTimes = lt;
+        }
+
         public int[] GetCardsOwned()
         {
             return cardsOwned;
         }
 
+        public void SetCardsOwned(int[] co)
+        {
+            this.cardsOwned = co;
+        }
+
         public int[] GetCardsUsed()
         {
             return cardsUsed;
+        }
+
+        public void SetCardsUsed(int[] cu)
+        {
+            this.cardsUsed = cu;
         }
 
 

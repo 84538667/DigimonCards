@@ -64,7 +64,7 @@ namespace DigimonCard
                 // 当未还原导航堆栈时，导航到第一页，
                 // 并通过将所需信息作为导航参数传入来配置
                 // 参数
-                if (!rootFrame.Navigate(typeof(MainPage), args.Arguments))
+                if (!rootFrame.Navigate(typeof(LoginPage), args.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

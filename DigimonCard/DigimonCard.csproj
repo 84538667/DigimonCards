@@ -130,8 +130,9 @@
     <Compile Include="RoomCard.xaml.cs">
       <DependentUpon>RoomCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WaitingRoom.xaml.cs">
-      <DependentUpon>WaitingRoom.xaml</DependentUpon>
+    <Compile Include="Self.cs" />
+    <Compile Include="TestSocketIO.xaml.cs">
+      <DependentUpon>TestSocketIO.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -193,13 +194,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WaitingRoom.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="TestSocketIO.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocketIO4Net\SocketIO4Net.csproj">
+      <Project>{27d619fb-a7c1-4366-9b12-283a702d0778}</Project>
+      <Name>SocketIO4Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

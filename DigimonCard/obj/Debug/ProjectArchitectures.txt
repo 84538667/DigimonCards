@@ -1,1 +1,2 @@
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\DigimonCard.csproj;neutral
+C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\DigimonCard.csproj;neutral
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\SocketIO4Net.csproj;neutral

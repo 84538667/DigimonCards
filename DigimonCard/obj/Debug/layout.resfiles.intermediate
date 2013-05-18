@@ -12,6 +12,8 @@ GamePage.xaml
 LoginPage.xaml
 RegistPage.xaml
 RoomCard.xaml
+TestSocketIO.xaml
+Common\ReadMe.txt
 Images\cube-room.jpg
 Images\login_bkg.jpg
 Images\mylogo.png
