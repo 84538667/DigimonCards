@@ -141,6 +141,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\artWord.png" />
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\Logo.png" />
@@ -149,17 +150,32 @@
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Common\ReadMe.txt" />
+    <Content Include="Images\attack&amp;tactic_area.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\card.png" />
+    <Content Include="Images\cardBack.png" />
+    <Content Include="Images\cardsInHand_area.png" />
+    <Content Include="Images\chooseCardsPanel.png" />
+    <Content Include="Images\chooseCards_bkg.jpg" />
     <Content Include="Images\cube-room.jpg" />
+    <Content Include="Images\defendBtn.png" />
+    <Content Include="Images\defendBtn_click.png" />
+    <Content Include="Images\gamepage_bkg.jpg" />
     <Content Include="Images\login_bkg.jpg" />
     <Content Include="Images\mylogo.png" />
     <Content Include="Images\newRoomBtn.png" />
     <Content Include="Images\newRoomBtn_click.png" />
+    <Content Include="Images\overturnBtn.png" />
+    <Content Include="Images\overturnBtn_click.png" />
     <Content Include="Images\quickJoinBtn.png" />
     <Content Include="Images\quickJoinBtn_click.png" />
+    <Content Include="Images\ready.png" />
     <Content Include="Images\regist.png" />
     <Content Include="Images\room.png" />
     <Content Include="Images\sunshine-twitter-background.jpg" />
     <Content Include="Images\title.png" />
+    <Content Include="Images\useBtn.png" />
+    <Content Include="Images\useBtn_click.png" />
     <Content Include="Images\WaitingRoom_bkg.jpg" />
     <Content Include="Musics\loggin.mp3" />
     <Content Include="Musics\数码宝贝OL音乐2（流畅）.mp3" />
@@ -203,15 +219,15 @@
     <None Include="Images\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SocketIO4Net\SocketIO4Net.csproj">
       <Project>{27d619fb-a7c1-4366-9b12-283a702d0778}</Project>
       <Name>SocketIO4Net</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

@@ -155,7 +155,7 @@ namespace DigimonCard.DigimonCard_XamlTypeInfo
                 break;
 
             case "DigimonCard.GamePage":
-                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.GamePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.GamePage), GetXamlTypeByName("DigimonCard.Common.LayoutAwarePage"));
                 userType.Activator = Activate_2_GamePage;
                 xamlType = userType;
                 break;
