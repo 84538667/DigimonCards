@@ -19,6 +19,20 @@
 				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
+		<Storyboard x:Name="storyboard_chatdisa">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13.571"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="408"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0:0:0.7" To="-6" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="listenTbx" d:IsOptimized="True"/>
+		</Storyboard>
+		<Storyboard x:Name="storyboard_chatappe">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-422"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-400"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</common:LayoutAwarePage.Resources>
 
     <!--
@@ -71,6 +85,25 @@
             <Image Height="141" Canvas.Left="570" Canvas.Top="627" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png"/>
             <Image Height="153" Canvas.Left="570" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png" Canvas.Top="-15"/>
         </Canvas>
+        <Grid x:Name="chatPanel" RenderTransformOrigin="0.5,0.5" Margin="0,590,1040,-400" Grid.Row="1">
+        	<Grid.RenderTransform>
+        		<CompositeTransform/>
+        	</Grid.RenderTransform>
+        	<Grid Background="White" Opacity="0.2" Margin="0,38,10,4">
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="143*"/>
+        			<ColumnDefinition Width="15*"/>
+        		</Grid.ColumnDefinitions>
+        	</Grid>
+        	<TextBox x:Name="sendTbx" HorizontalAlignment="Left" Margin="0,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="36" IsSpellCheckEnabled="True" FontSize="18" Foreground="Black" Background="{x:Null}"/>
+        	<Button x:Name="sendBtn" Content="发送" HorizontalAlignment="Left" Margin="245,396,0,0" VerticalAlignment="Stretch" Width="71" FontWeight="Bold" FontSize="20" Click="sendBtn_click"/>
+        	<TextBox x:Name="listenTbx" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="355" Width="316" Background="{x:Null}" FontSize="18" IsReadOnly="True" Margin="0,38,0,0" RenderTransformOrigin="0.5,0.5">
+        		<TextBox.RenderTransform>
+        			<CompositeTransform/>
+        		</TextBox.RenderTransform>
+        	</TextBox>
+            <Button x:Name="pop_fold_Btn" Content="弹出聊天框" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Height="43" Width="162" Click="pop_fold_Btn_Click"/>
+        </Grid>
 
     </Grid>
 </common:LayoutAwarePage>

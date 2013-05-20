@@ -3,9 +3,13 @@ Assets\LightGray.png
 Assets\Logo.png
 Assets\MediumGray.png
 Assets\SmallLogo.png
+Assets\SplashScreen.jpg
 Assets\SplashScreen.png
 Assets\StoreLogo.png
+Assets\WideLogo.jpg
 App.xaml
+AttractCards.xaml
+Cards.xaml
 Common\StandardStyles.xaml
 GameLobbyPage.xaml
 GamePage.xaml

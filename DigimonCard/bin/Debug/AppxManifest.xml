@@ -22,9 +22,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="DigimonCard.exe" EntryPoint="DigimonCard.App">
-      <VisualElements DisplayName="DigimonCard" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DigimonCard" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+      <VisualElements DisplayName="DigimonCard" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DigimonCard" ForegroundText="light" BackgroundColor="#000000">
+        <DefaultTile ShowName="allLogos" WideLogo="Assets\WideLogo.jpg" />
+        <SplashScreen Image="Assets\SplashScreen.jpg" />
       </VisualElements>
     </Application>
   </Applications>

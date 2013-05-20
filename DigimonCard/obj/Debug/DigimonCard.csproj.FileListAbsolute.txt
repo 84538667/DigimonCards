@@ -1,90 +1,3 @@
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\App.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\App.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RegistPage.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RegistPage.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\WaitingRoom.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\WaitingRoom.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\Common\StandardStyles.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\Common\StandardStyles.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\LoginPage.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\LoginPage.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\XamlTypeInfo.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\App.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RegistPage.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\WaitingRoom.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\Common\StandardStyles.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\LoginPage.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\DigimonCard.exe
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\DigimonCard.pdb
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\resources.pri
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\AppxManifest.xml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\bin\Debug\DigimonCard.build.appxrecipe
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\DigimonCard.exe
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\DigimonCard.pdb
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\priconfig.xml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\layout.resfiles
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\resources.resfiles
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\pri.resfiles
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\LanguageQualifiers.txt
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\ProjectArchitectures.txt
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GamePage.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GamePage.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GamePage.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GameLobbyPage.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GameLobbyPage.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RoomCard.g.i.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RoomCard.g.cs
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\RoomCard.xaml
-C:\Users\lhc\Documents\Visual Studio 2012\Projects\DigimonCard\DigimonCard\obj\Debug\GameLobbyPage.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\DigimonCard.csprojResolveAssemblyReference.cache
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\DigimonCard.exe
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\DigimonCard.pdb
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\App.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\App.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GamePage.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GamePage.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RegistPage.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RegistPage.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\Common\StandardStyles.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\Common\StandardStyles.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\LoginPage.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\LoginPage.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RoomCard.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RoomCard.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\XamlTypeInfo.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\App.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\GamePage.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RegistPage.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\Common\StandardStyles.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\LoginPage.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\RoomCard.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\DigimonCard.exe
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\DigimonCard.pdb
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\resources.pri
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\AppxManifest.xml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\DigimonCard.build.appxrecipe
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\Newtonsoft.Json.dll
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\SocketIO4Net.dll
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\SocketIO4Net.pdb
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\SocketIO4Net.pri
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.g.i.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.g.cs
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.xaml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\DigimonCard.csproj.GenerateResource.Cache
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\priconfig.xml.intermediate
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\layout.resfiles.intermediate
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\resources.resfiles.intermediate
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\pri.resfiles.intermediate
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\priconfig.xml
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\layout.resfiles
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\resources.resfiles
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\pri.resfiles
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\LanguageQualifiers.txt
-C:\Users\lhc\Documents\GitHub\DigimonCards\DigimonCard\obj\Debug\ProjectArchitectures.txt
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.exe
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.pdb
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\resources.pri
@@ -98,6 +11,10 @@ F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\Newtonsoft.Json.xm
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\DigimonCard.csprojResolveAssemblyReference.cache
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\App.g.i.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\App.g.cs
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\AttractCards.g.i.cs
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\AttractCards.g.cs
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\Cards.g.i.cs
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\Cards.g.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.g.i.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.g.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\GamePage.g.i.cs
@@ -114,6 +31,8 @@ F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.g.i.c
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.g.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\XamlTypeInfo.g.cs
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\App.xaml
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\AttractCards.xaml
+F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\Cards.xaml
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\GameLobbyPage.xaml
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\GamePage.xaml
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\RegistPage.xaml
@@ -124,10 +43,6 @@ F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\TestSocketIO.xaml
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\DigimonCard.exe
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\DigimonCard.pdb
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\DigimonCard.csproj.GenerateResource.Cache
-F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\priconfig.xml.intermediate
-F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\layout.resfiles.intermediate
-F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\resources.resfiles.intermediate
-F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\pri.resfiles.intermediate
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\priconfig.xml
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\layout.resfiles
 F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\obj\Debug\resources.resfiles

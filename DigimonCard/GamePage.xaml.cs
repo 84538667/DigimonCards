@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using SocketIO4Net;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Networking.Sockets;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,6 +17,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.Web;
+using SocketIOClient;
+using Windows.UI.Core;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -25,14 +33,55 @@ namespace DigimonCard
         public int readyPersonNum = 0 ;
         public bool hostIsReady = false;
         public bool challengerIsReady = false;
+        private Client socketIO;
+        String s;
+        private CoreDispatcher SampleDispatcher;
 
         public GamePage()
         {
             this.InitializeComponent();
 
+            SampleDispatcher = Window.Current.CoreWindow.Dispatcher; //此实例是负责处理窗口消息，事件调度给客户端。
+
+            createConnect();
+
             Storyboard_uiBe.Completed += Storyboard_uiBe_Completed;
         }
 
+        public void createConnect()
+        {
+            socketIO = new Client("http://168.63.151.29:3000");
+            socketIO.Message += socketIO_Message;
+            socketIO.SocketConnectionClosed += socketIO_SocketConnectionClosed;
+            socketIO.Error += socketIO_Error;
+
+            this.listenTbx.Text = "aa";
+            this.listenTbx.Text += "bb";
+
+            socketIO.On("connect", (message) =>
+            {
+
+                Debug.WriteLine("on connect called!!!");
+                JObject jo = new JObject();
+                jo["publisher"] = "username";
+                jo["password"] = "password";
+                socketIO.Emit("hConnect", jo);
+            });
+
+            socketIO.ConnectAsync();
+
+            socketIO.On("a", async (message) =>
+            {
+                s = message.Json.ToJsonString();
+                Debug.WriteLine("start listening");
+                Debug.WriteLine(message.Json.ToJsonString());
+                await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+                    ChangedEventHandler(message.Json.ToJsonString());
+                });
+            });
+
+        }
         /// <summary>
         /// 使用在导航过程中传递的内容填充页。在从以前的会话
         /// 重新创建页时，也会提供任何已保存状态。
@@ -143,5 +192,70 @@ namespace DigimonCard
                 }
             }
         }
+
+        void socketIO_Message(object sender, MessageEventArgs e)
+        {
+            if (string.IsNullOrEmpty(e.Message.Event))
+            {
+                Debug.WriteLine("--> SOCKET_IO_MESSAGE:: {0}", e.Message.MessageText);
+            }
+            else
+            {
+                Debug.WriteLine("--> SOCKET_IO_MESSAGE:: {0} : {1}", e.Message.Event, e.Message.Json.ToJsonString());
+                //screenTbk.Text += e.Message.Json.ToJsonString();
+            }
+        }
+
+        void socketIO_Error(object sender, ErrorEventArgs e)
+        {
+            WebErrorStatus status = WebSocketError.GetStatus(e.Exception.HResult);
+            Debug.WriteLine("-->SOCKET_IO_ERROR::" + status);
+        }
+
+        void socketIO_SocketConnectionClosed(object sender, EventArgs e)
+        {
+            Debug.WriteLine(">>>socketIO_SocketConnectionClosed::Closed!");
+        }
+
+        // 断开连接的控件，现已删除 
+        //private void disConnectBt_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //if (socketIO != null)
+        //    //{
+        //    socketIO.Close();
+        //    // }
+        //}
+
+        private void sendBtn_click(object sender, RoutedEventArgs e)
+        {
+            if (socketIO != null && socketIO.IsConnected)
+            {
+                Debug.WriteLine("on send connect called!!!");
+                //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
+                string s = "{\"a\":\"" + this.sendTbx.Text + "\"}";
+                socketIO.Emit("hConnect", JObject.Parse(s));
+
+            }
+        }
+
+        private void ChangedEventHandler(string s)
+        {
+            this.listenTbx.Text += s;
+        }
+
+        private void pop_fold_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            if ((string)pop_fold_Btn.Content == "弹出聊天框")
+            {
+                storyboard_chatappe.Begin();
+                pop_fold_Btn.Content = "收起聊天框";
+            }
+            else
+            {
+                storyboard_chatdisa.Begin();
+                pop_fold_Btn.Content = "弹出聊天框";
+            }
+        }
+
     }
 }

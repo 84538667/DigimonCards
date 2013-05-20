@@ -9,39 +9,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Page.Resources>
-
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
-        <Storyboard x:Name="storyboard_appear">
-            <DoubleAnimation Duration="0:0:0.7" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="chooseCardsPanel" d:IsOptimized="True"/>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chooseCardsPanel">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="745.352"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="701.352"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Name="storyboard_artWord">
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="artWord">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="-2"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-2"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-435"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="artWord">
-        		<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="243.5"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="artWord">
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.417"/>
-        	</DoubleAnimationUsingKeyFrames>
-        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="artWord">
-        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.438"/>
-        	</DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Page.Resources>
+	<common:LayoutAwarePage.Resources>
+		<Storyboard x:Name="Storyboard_uiBe">
+			<DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="uiBeforeGameBegin" d:IsOptimized="True"/>
+		</Storyboard>
+		<Storyboard x:Name="Storyboard_uiAf">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="uiAfterGameBegin">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="storyboard_chatdisa">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13.571"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="408"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimation Duration="0:0:0.7" To="-6" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="listenTbx" d:IsOptimized="True"/>
+		</Storyboard>
+		<Storyboard x:Name="storyboard_chatappe">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-422"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-400"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</common:LayoutAwarePage.Resources>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -56,11 +48,8 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!-- Back button and page title -->
-
+        
         <VisualStateManager.VisualStateGroups>
-
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
                 <VisualState x:Name="FullScreenLandscape"/>
@@ -73,27 +62,49 @@
                 <VisualState x:Name="Snapped"/>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
-        <TextBlock HorizontalAlignment="Left" Margin="397,12,0,0" Grid.Row="1" TextWrapping="Wrap" Text="房主" VerticalAlignment="Top" Height="44" Width="83" FontSize="36" FontFamily="Arial Black" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="893,13,0,0" Grid.Row="1" TextWrapping="Wrap" Text="挑战者" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" FontWeight="Bold"/>
-        <Image x:Name="hostPhoto" HorizontalAlignment="Left" Height="157" Margin="355,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160"/>
-        <Image x:Name="challengerPhoto" HorizontalAlignment="Left" Height="157" Margin="872,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="159"/>
-        <Image x:ConnectionId='1' x:Name="hostReadyBtn" HorizontalAlignment="Left" Height="55" Margin="372,387,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Source="Images/ready.png" Stretch="Fill"                                      />
-        <Image x:ConnectionId='2' x:Name="challengerReadyBtn" HorizontalAlignment="Left" Height="55" Margin="889,387,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Source="Images/ready.png" Stretch="Fill"                                            />
-        <Grid x:Name="maskPanel" HorizontalAlignment="Left" Height="770" Margin="-2,-2,0,0" VerticalAlignment="Top" Width="1368" Grid.RowSpan="2" Background="Black" Opacity="0.7" Visibility="Collapsed"/>
-        <Canvas x:Name="chooseCardsPanel" HorizontalAlignment="Left" Height="569" Margin="185,-604,0,0" VerticalAlignment="Top" Width="999" RenderTransformOrigin="0.5,0.5">
-        	<Canvas.RenderTransform>
-        		<CompositeTransform/>
-        	</Canvas.RenderTransform>
-            <Canvas.Background>
-                <ImageBrush ImageSource="Images/chooseCardsPanel.png"/>
-            </Canvas.Background>
-            <Image x:Name="artWord" Height="169" Canvas.Left="367" Canvas.Top="193" Width="271" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5">
-            	<Image.RenderTransform>
-            		<CompositeTransform/>
-            	</Image.RenderTransform>
-            </Image>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='5' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1124,20,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
+        </Grid>
+
+        <Canvas x:Name="uiBeforeGameBegin" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Grid.RowSpan="2">
+            <TextBlock x:Name="text1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="房主" VerticalAlignment="Top" Height="44" Width="83" FontSize="36" FontFamily="Arial Black" FontWeight="Bold" Canvas.Left="397" Canvas.Top="152"/>
+            <TextBlock x:Name="text2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="挑战者" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" FontWeight="Bold" Canvas.Left="893" Canvas.Top="153"/>
+            <Image x:Name="hostPhoto" HorizontalAlignment="Left" Height="157" VerticalAlignment="Top" Width="160" Canvas.Left="355" Canvas.Top="263"/>
+            <Image x:Name="challengerPhoto" HorizontalAlignment="Left" Height="157" VerticalAlignment="Top" Width="159" Canvas.Left="872" Canvas.Top="263"/>
+            <Image x:ConnectionId='3' x:Name="hostReadyBtn" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="118" Source="Images/ready.png" Stretch="Fill"                                       Canvas.Left="372" Canvas.Top="527"/>
+            <Image x:ConnectionId='4' x:Name="challengerReadyBtn" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="118" Source="Images/ready.png" Stretch="Fill"                                             Canvas.Left="889" Canvas.Top="527"/>
         </Canvas>
+        <Canvas x:Name="uiAfterGameBegin" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Grid.RowSpan="2" Opacity="0" Visibility="Collapsed">
+            <Image x:Name="image" Height="487" Canvas.Left="510" Canvas.Top="138" Width="628" Source="Images/attack&amp;tactic_area.png" Stretch="Fill"/>
+            <Image Height="141" Canvas.Left="570" Canvas.Top="627" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png"/>
+            <Image Height="153" Canvas.Left="570" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png" Canvas.Top="-15"/>
+        </Canvas>
+        <Grid x:Name="chatPanel" RenderTransformOrigin="0.5,0.5" Margin="0,590,1040,-400" Grid.Row="1">
+        	<Grid.RenderTransform>
+        		<CompositeTransform/>
+        	</Grid.RenderTransform>
+        	<Grid Background="White" Opacity="0.2" Margin="0,38,10,4">
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="143*"/>
+        			<ColumnDefinition Width="15*"/>
+        		</Grid.ColumnDefinitions>
+        	</Grid>
+        	<TextBox x:Name="sendTbx" HorizontalAlignment="Left" Margin="0,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="36" IsSpellCheckEnabled="True" FontSize="18" Foreground="Black" Background="{x:Null}"/>
+        	<Button x:ConnectionId='1' x:Name="sendBtn" Content="发送" HorizontalAlignment="Left" Margin="245,396,0,0" VerticalAlignment="Stretch" Width="71" FontWeight="Bold" FontSize="20"                      />
+        	<TextBox x:Name="listenTbx" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="355" Width="316" Background="{x:Null}" FontSize="18" IsReadOnly="True" Margin="0,38,0,0" RenderTransformOrigin="0.5,0.5">
+        		<TextBox.RenderTransform>
+        			<CompositeTransform/>
+        		</TextBox.RenderTransform>
+        	</TextBox>
+            <Button x:ConnectionId='2' x:Name="pop_fold_Btn" Content="弹出聊天框" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Height="43" Width="162"                           />
+        </Grid>
+
     </Grid>
 </common:LayoutAwarePage>
 

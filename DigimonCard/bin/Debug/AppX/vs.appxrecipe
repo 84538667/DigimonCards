@@ -5,7 +5,7 @@
     <WindowsUser>bug忘忧草</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>45F04B061931ACCD65AE26E8D720B1DDA0CA1451DB705A3694242B3C5C451571</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4A86E77606400826DA60B181C6D311EC915902BE7A78351D907089C943F47C0D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1d9ec042-7b5b-4d17-85a7-a62f2611774d_1.0.0.0_neutral__yps17xarsp2at</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1d9ec042-7b5b-4d17-85a7-a62f2611774d_yps17xarsp2at!App</RegisteredUserModeAppID>
     <RegisteredPackageID>1d9ec042-7b5b-4d17-85a7-a62f2611774d</RegisteredPackageID>
@@ -16,21 +16,21 @@
     <AppXManifest Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-19T09:44:55.654</Modified>
+      <Modified>2013-05-20T02:37:10.995</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.exe">
       <PackagePath>DigimonCard.exe</PackagePath>
-      <Modified>2013-05-19T09:44:55.087</Modified>
+      <Modified>2013-05-20T07:42:07.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.pdb">
       <PackagePath>DigimonCard.pdb</PackagePath>
-      <Modified>2013-05-19T09:44:55.032</Modified>
+      <Modified>2013-05-20T07:42:07.313</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pdb">
       <PackagePath>SocketIO4Net.pdb</PackagePath>
-      <Modified>2013-05-19T05:37:26.220</Modified>
+      <Modified>2013-05-20T02:37:03.010</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -38,11 +38,45 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.dll">
       <PackagePath>SocketIO4Net.dll</PackagePath>
-      <Modified>2013-05-19T05:37:26.307</Modified>
+      <Modified>2013-05-20T02:37:03.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml">
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
       <Modified>2013-05-19T05:19:41.548</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\SplashScreen.jpg">
+      <PackagePath>Assets\SplashScreen.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-19T15:45:17.574</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\WideLogo.jpg">
+      <PackagePath>Assets\WideLogo.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-19T15:45:17.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\chooseCards_bkg.jpg">
+      <PackagePath>Images\chooseCards_bkg.jpg</PackagePath>
+      <Modified>2013-05-18T17:03:29.969</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cube-room.jpg">
+      <PackagePath>Images\cube-room.jpg</PackagePath>
+      <Modified>2013-05-18T03:21:05.795</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\gamepage_bkg.jpg">
+      <PackagePath>Images\gamepage_bkg.jpg</PackagePath>
+      <Modified>2013-05-18T17:53:20.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\login_bkg.jpg">
+      <PackagePath>Images\login_bkg.jpg</PackagePath>
+      <Modified>2013-05-18T03:21:05.810</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\sunshine-twitter-background.jpg">
+      <PackagePath>Images\sunshine-twitter-background.jpg</PackagePath>
+      <Modified>2013-05-18T03:21:05.842</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\WaitingRoom_bkg.jpg">
+      <PackagePath>Images\WaitingRoom_bkg.jpg</PackagePath>
+      <Modified>2013-05-18T03:21:05.779</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\artWord.png">
       <PackagePath>Images\artWord.png</PackagePath>
@@ -59,7 +93,7 @@
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-19T05:19:40.516</Modified>
+      <Modified>2013-05-19T15:45:17.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
@@ -72,7 +106,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-05-19T05:19:40.522</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\StoreLogo.png">
@@ -168,30 +201,6 @@
       <PackagePath>Common\ReadMe.txt</PackagePath>
       <Modified>2013-05-19T05:19:40.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\chooseCards_bkg.jpg">
-      <PackagePath>Images\chooseCards_bkg.jpg</PackagePath>
-      <Modified>2013-05-18T17:03:29.969</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cube-room.jpg">
-      <PackagePath>Images\cube-room.jpg</PackagePath>
-      <Modified>2013-05-18T03:21:05.795</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\gamepage_bkg.jpg">
-      <PackagePath>Images\gamepage_bkg.jpg</PackagePath>
-      <Modified>2013-05-18T17:53:20.819</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\login_bkg.jpg">
-      <PackagePath>Images\login_bkg.jpg</PackagePath>
-      <Modified>2013-05-18T03:21:05.810</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\sunshine-twitter-background.jpg">
-      <PackagePath>Images\sunshine-twitter-background.jpg</PackagePath>
-      <Modified>2013-05-18T03:21:05.842</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\WaitingRoom_bkg.jpg">
-      <PackagePath>Images\WaitingRoom_bkg.jpg</PackagePath>
-      <Modified>2013-05-18T03:21:05.779</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Musics\loggin.mp3">
       <PackagePath>Musics\loggin.mp3</PackagePath>
       <Modified>2013-05-19T05:19:40.768</Modified>
@@ -208,13 +217,21 @@
       <PackagePath>App.xaml</PackagePath>
       <Modified>2013-05-19T05:19:40.506</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\AttractCards.xaml">
+      <PackagePath>AttractCards.xaml</PackagePath>
+      <Modified>2013-05-19T13:31:58.929</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\Cards.xaml">
+      <PackagePath>Cards.xaml</PackagePath>
+      <Modified>2013-05-19T15:39:25.616</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\GameLobbyPage.xaml">
       <PackagePath>GameLobbyPage.xaml</PackagePath>
-      <Modified>2013-05-19T05:37:20.310</Modified>
+      <Modified>2013-05-19T15:31:22.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\GamePage.xaml">
       <PackagePath>GamePage.xaml</PackagePath>
-      <Modified>2013-05-19T09:44:50.775</Modified>
+      <Modified>2013-05-20T05:51:10.246</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\RegistPage.xaml">
       <PackagePath>RegistPage.xaml</PackagePath>
@@ -226,7 +243,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\LoginPage.xaml">
       <PackagePath>LoginPage.xaml</PackagePath>
-      <Modified>2013-05-19T05:19:40.658</Modified>
+      <Modified>2013-05-19T15:46:48.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\RoomCard.xaml">
       <PackagePath>RoomCard.xaml</PackagePath>
@@ -234,11 +251,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\TestSocketIO.xaml">
       <PackagePath>TestSocketIO.xaml</PackagePath>
-      <Modified>2013-05-19T05:19:40.974</Modified>
+      <Modified>2013-05-19T14:19:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-05-19T09:44:55.561</Modified>
+      <Modified>2013-05-20T02:37:10.480</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

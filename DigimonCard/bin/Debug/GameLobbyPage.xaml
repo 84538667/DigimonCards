@@ -10,7 +10,52 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
 
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+        <Storyboard x:Name="storyboard_appear">
+        	<DoubleAnimation Duration="0:0:0.7" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="chooseCardsPanel" d:IsOptimized="True"/>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chooseCardsPanel">
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="745.352"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="701.352"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboard_artWord">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="artWord">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-435"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="artWord">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="243.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="artWord">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.417"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="artWord">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.438"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboard_visible">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Canvas_cards">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="storyboard_disapp">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chooseCardsPanel">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="704"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="743.996"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.996"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
@@ -34,8 +79,8 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='6' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <Image Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1123,16,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
+            <Button x:ConnectionId='7' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1124,20,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" Text="游戏大厅" VerticalAlignment="Top" Height="50" Width="155" FontSize="36" FontWeight="Bold"/>
         </Grid>
         <Image x:ConnectionId='1' x:Name="newRoomBtn" HorizontalAlignment="Left" Height="66" Margin="942,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Source="Images/newRoomBtn.png"                                                                           Stretch="Fill" Visibility="Collapsed"/>
@@ -69,6 +114,27 @@
             <ComboBoxItem Content="第24页" Foreground="Black"/>
             <ComboBoxItem Content="第25页" Foreground="Black"/>
         </ComboBox>
+
+        <Grid x:Name="maskPanel" HorizontalAlignment="Left" Height="770" Margin="-2,-2,0,0" VerticalAlignment="Top" Width="1368" Grid.RowSpan="2" Background="Black" Opacity="0.7" Visibility="Collapsed"/>
+        <Grid x:Name="chooseCardsPanel" HorizontalAlignment="Left" Height="569" Margin="185,-604,0,0" VerticalAlignment="Top" Width="999" RenderTransformOrigin="0.5,0.5" MaxWidth="999" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/chooseCardsPanel.png"/>
+            </Grid.Background>
+            <Image x:Name="artWord" Height="169" Canvas.Left="367" Canvas.Top="193" Width="271" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Canvas x:Name="Canvas_cards" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="999" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" MaxWidth="999" Opacity="0">
+                <Canvas.Clip>
+                    <RectangleGeometry x:Name="ClipRect" Rect="0,0,999,569" />
+                </Canvas.Clip>
+            </Canvas>
+        </Grid>
+        <Button x:ConnectionId='6' x:Name="chooseCardBtn" Content="手牌" HorizontalAlignment="Left" Margin="1274,400,0,0" VerticalAlignment="Top" Height="51" Width="92" Grid.Row="1"                          />
 
         <VisualStateManager.VisualStateGroups>
 
