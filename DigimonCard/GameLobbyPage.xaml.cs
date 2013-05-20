@@ -22,42 +22,54 @@ namespace DigimonCard
     /// </summary>
     public sealed partial class GameLobbyPage : DigimonCard.Common.LayoutAwarePage
     {
-        public RoomCard[] roomCard = new RoomCard[100];
+        public RoomCard[] roomCard = new RoomCard[120];
         public Cards[] cards = new Cards[51];
         public int roomCard_buffer;
-        public bool isFirst_Click = false;
+        public bool isFirst_Click = true;
         public bool isChooseCardsbegin = false;
         public static Uri baseUri = new Uri("ms-appx:///");
         public int currentPageNum = 1;
+
+        private int currentPageTotalRoomNum = 8;
+        private int totalPage = 15;
 
         public GameLobbyPage()
         {
             this.InitializeComponent();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0 ; i < 17 ; i++)
+                for (int j = 0 ; j < 3 ; j++)
+                {
+                    cards[i*3+j] = new Cards();
+                    Canvas.SetLeft(cards[i * 3 + j] , i * 100 + 20);
+                    Canvas.SetTop(cards[i * 3 + j], j * 150 + 50);
+                    Canvas_cards.Children.Add(cards[i*3+j]);
+                }
+            
+            
+            for (int i = 0; i < currentPageTotalRoomNum * totalPage; i++)
             {
                 roomCard[i] = new RoomCard(i + 1);
                 roomCard[i].PointerPressed += roomCard_pressed;
             }
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < totalPage; i++)
+            {
                 for (int j = 0; j < 4; j++)
                 {
-                    Canvas.SetLeft(roomCard[i * 4 + j], j * 270 + 50);
-                    Canvas.SetTop(roomCard[i * 4 + j], 50);
-                    roomArea.Children.Add(roomCard[i * 4 + j]);
+                    Canvas.SetLeft(roomCard[i * 8 + j], j * 180 + 80);
+                    Canvas.SetTop(roomCard[i * 8 + j], 0);
+                    roomArea.Children.Add(roomCard[i * 8 + j]);
                 }
-            for (int i = 4; i < 100; i++)
-                roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-
-            for (int i = 0; i < 17; i++)
-                for (int j = 0; j < 3; j++)
+                for (int j = 4; j < currentPageTotalRoomNum; j++)
                 {
-                    cards[i * 3 + j] = new Cards();
-                    Canvas.SetLeft(cards[i * 3 + j], i * 100 + 10);
-                    Canvas.SetTop(cards[i * 3 + j], j * 150 + 50);
-                    Canvas_cards.Children.Add(cards[i * 3 + j]);
+                    Canvas.SetLeft(roomCard[i * 8 + j], (j - 4) * 180 + 350);
+                    Canvas.SetTop(roomCard[i * 8 + j], 180);
+                    roomArea.Children.Add(roomCard[i * 8 + j]);
                 }
-
+            }
+            for (int i = 8; i < 120; i++)
+                roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            
             storyboard_appear.Completed += storyboard_artWordBegin;
             storyboard_artWord.Completed += storyboard_artWord_completed;
             storyboard_visible.Completed += storyboard_visible_Completed;
@@ -108,15 +120,23 @@ namespace DigimonCard
 
         private void roomCard_pressed(object sender, PointerRoutedEventArgs e)
         {
-             for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
-                 if (roomCard[i] == (RoomCard)sender)
-                 {
-                     if (isFirst_Click != false)
-                         roomCard[roomCard_buffer].ClickBox.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                     else
-                         isFirst_Click = true;
-                     roomCard_buffer = i;
-                 }
+            for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
+                if (roomCard[i] == (RoomCard)sender)
+                {
+                    if (isFirst_Click == true)
+                        isFirst_Click = false;
+                    else if (i == roomCard_buffer)
+                        roomCard[i].roomPng.Opacity = 0.7;
+                    else
+                    {
+                        roomCard[i].roomPng.Opacity = 0.7;
+                        roomCard[roomCard_buffer].roomPng.Opacity = 1.0;
+                    }
+                    roomCard_buffer = i;
+                }
+            
+                
+             
         }
 
         private void NewRoomBtn_pressed(object sender, PointerRoutedEventArgs e)
@@ -155,31 +175,32 @@ namespace DigimonCard
             this.Frame.Navigate(typeof(GamePage));
         }
 
-        private void lastPageBtn_click(object sender, RoutedEventArgs e)
+        private void previousPageBtn_click(object sender, RoutedEventArgs e)
         {
             if (currentPageNum != 1)
             {
-                for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+                for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
                 currentPageNum--;
 
-                for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+                for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
             }
             this.pageBox.SelectedIndex = currentPageNum - 1;
+            
         }
 
         private void nextPageBtn_click(object sender, RoutedEventArgs e)
         {
-            if (currentPageNum != 25)
+            if (currentPageNum != totalPage)
             {
-                for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+                for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
                 currentPageNum++;
 
-                for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+                for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                     roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
 
                 this.pageBox.SelectedIndex = currentPageNum - 1;
@@ -188,15 +209,16 @@ namespace DigimonCard
 
         private void PageChanged(object sender, SelectionChangedEventArgs e)
         {
-            for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+            for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
             currentPageNum = pageBox.SelectedIndex + 1;
 
-            for (int i = (currentPageNum - 1) * 4; i < (currentPageNum - 1) * 4 + 4; i++)
+            for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
+           
         }
 
         private void cardsInHand_click(object sender, RoutedEventArgs e)

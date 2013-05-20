@@ -122,9 +122,9 @@ namespace DigimonCard.DigimonCard_XamlTypeInfo
 
         private object Activate_4_GamePage() { return new global::DigimonCard.GamePage(); }
 
-        private object Activate_5_RegistPage() { return new global::DigimonCard.RegistPage(); }
+        private object Activate_5_LoginPage() { return new global::DigimonCard.LoginPage(); }
 
-        private object Activate_6_LoginPage() { return new global::DigimonCard.LoginPage(); }
+        private object Activate_6_RegistPage() { return new global::DigimonCard.RegistPage(); }
 
         private object Activate_7_RoomCard() { return new global::DigimonCard.RoomCard(); }
 
@@ -176,15 +176,15 @@ namespace DigimonCard.DigimonCard_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "DigimonCard.RegistPage":
-                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.RegistPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_RegistPage;
+            case "DigimonCard.LoginPage":
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.LoginPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_LoginPage;
                 xamlType = userType;
                 break;
 
-            case "DigimonCard.LoginPage":
-                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.LoginPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_LoginPage;
+            case "DigimonCard.RegistPage":
+                userType = new global::DigimonCard.DigimonCard_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::DigimonCard.RegistPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_RegistPage;
                 xamlType = userType;
                 break;
 

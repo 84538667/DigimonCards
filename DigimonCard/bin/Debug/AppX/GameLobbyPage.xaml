@@ -85,7 +85,7 @@
         </Grid>
         <Image x:ConnectionId='1' x:Name="newRoomBtn" HorizontalAlignment="Left" Height="66" Margin="942,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Source="Images/newRoomBtn.png"                                                                           Stretch="Fill" Visibility="Collapsed"/>
         <Image x:ConnectionId='2' x:Name="QuickJoinBtn" HorizontalAlignment="Left" Height="61" Margin="1114,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Source="Images/quickJoinBtn.png" Stretch="Fill"                                                                              />
-        <Button x:ConnectionId='3' Content="上一页" HorizontalAlignment="Left" Margin="898,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"                           Background="#FFFF8B00"/>
+        <Button x:ConnectionId='3' Content="上一页" HorizontalAlignment="Left" Margin="898,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"                               Background="#FFFF8B00"/>
         <Button x:ConnectionId='4' Content="下一页" HorizontalAlignment="Left" Margin="1002,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"                           Background="#FFFF8B00"/>
         <ComboBox x:ConnectionId='5' x:Name="pageBox" HorizontalAlignment="Left" Margin="772,493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" FontSize="16" FontWeight="Bold" Background="#CCFFFFFF" BorderBrush="#CC000000" Foreground="Black"                               >
             <ComboBoxItem Content="第1页" Foreground="Black"/>
@@ -103,16 +103,6 @@
             <ComboBoxItem Content="第13页" Foreground="Black"/>
             <ComboBoxItem Content="第14页" Foreground="Black"/>
             <ComboBoxItem Content="第15页" Foreground="Black"/>
-            <ComboBoxItem Content="第16页" Foreground="Black"/>
-            <ComboBoxItem Content="第17页" Foreground="Black"/>
-            <ComboBoxItem Content="第18页" Foreground="Black"/>
-            <ComboBoxItem Content="第19页" Foreground="Black"/>
-            <ComboBoxItem Content="第20页" Foreground="Black"/>
-            <ComboBoxItem Content="第21页" Foreground="Black"/>
-            <ComboBoxItem Content="第22页" Foreground="Black"/>
-            <ComboBoxItem Content="第23页" Foreground="Black"/>
-            <ComboBoxItem Content="第24页" Foreground="Black"/>
-            <ComboBoxItem Content="第25页" Foreground="Black"/>
         </ComboBox>
 
         <Grid x:Name="maskPanel" HorizontalAlignment="Left" Height="770" Margin="-2,-2,0,0" VerticalAlignment="Top" Width="1368" Grid.RowSpan="2" Background="Black" Opacity="0.7" Visibility="Collapsed"/>

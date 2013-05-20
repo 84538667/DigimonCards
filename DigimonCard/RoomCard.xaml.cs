@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // “用户控件”项模板在 http://go.microsoft.com/fwlink/?LinkId=234236 上提供
@@ -29,8 +30,17 @@ namespace DigimonCard
         public RoomCard(int rmNum)
         {
             this.InitializeComponent();
-
             roomNum.Text = rmNum.ToString();
+
+            int totalRoomPng = 10;
+            int rmImgType = rmNum % totalRoomPng;
+            string roomImgSource = "ms-appx:///Images/room";
+            roomImgSource = roomImgSource + rmImgType.ToString() + ".png";
+
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.UriSource = new Uri(roomImgSource);
+            roomPng.Source = bitmapImage;
+
         }
 
         private void JoinIn_byPhoto(object sender, PointerRoutedEventArgs e)
@@ -40,7 +50,17 @@ namespace DigimonCard
 
         private void BeSelect(object sender, PointerRoutedEventArgs e)
         {
-                ClickBox.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            if (roomCard_OnClick == false)
+            {
+                roomPng.Opacity = 0.7;
+                roomCard_OnClick = true;
+            }
+            else
+            {
+                roomPng.Opacity = 1.0;
+                roomCard_OnClick = false;
+            }
+
         }
     }
 }

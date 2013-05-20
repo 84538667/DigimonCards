@@ -1,195 +1,228 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>YONGCUN</Machine>
-    <WindowsUser>bug忘忧草</WindowsUser>
+    <Machine>EL1VEN</Machine>
+    <WindowsUser>el1ven2013</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.exe">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\DigimonCard.exe">
       <PackagePath>DigimonCard.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\DigimonCard.pdb">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\DigimonCard.pdb">
       <PackagePath>DigimonCard.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pdb">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pdb">
       <PackagePath>SocketIO4Net.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.dll">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.dll">
       <PackagePath>SocketIO4Net.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\packages\Newtonsoft.Json.5.0.5\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml">
       <PackagePath>Newtonsoft.Json.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\SplashScreen.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\SplashScreen.jpg">
       <PackagePath>Assets\SplashScreen.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\WideLogo.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\WideLogo.jpg">
       <PackagePath>Assets\WideLogo.jpg</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\chooseCards_bkg.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\chooseCards_bkg.jpg">
       <PackagePath>Images\chooseCards_bkg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cube-room.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\cube-room.jpg">
       <PackagePath>Images\cube-room.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\gamepage_bkg.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\gamepage_bkg.jpg">
       <PackagePath>Images\gamepage_bkg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\login_bkg.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\login_bkg.jpg">
       <PackagePath>Images\login_bkg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\sunshine-twitter-background.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\registPageBackground.jpg">
+      <PackagePath>Images\registPageBackground.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\sunshine-twitter-background.jpg">
       <PackagePath>Images\sunshine-twitter-background.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\WaitingRoom_bkg.jpg">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\WaitingRoom_bkg.jpg">
       <PackagePath>Images\WaitingRoom_bkg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\artWord.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\artWord.png">
       <PackagePath>Images\artWord.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\DarkGray.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\LightGray.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\Logo.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\MediumGray.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\attack&amp;tactic_area.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\attack&amp;tactic_area.png">
       <PackagePath>Images\attack&amp;tactic_area.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cancel.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\cancel.png">
       <PackagePath>Images\cancel.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\card.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\card.png">
       <PackagePath>Images\card.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cardBack.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\cardBack.png">
       <PackagePath>Images\cardBack.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\cardsInHand_area.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\cardsInHand_area.png">
       <PackagePath>Images\cardsInHand_area.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\chooseCardsPanel.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\chooseCardsPanel.png">
       <PackagePath>Images\chooseCardsPanel.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\defendBtn.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\defendBtn.png">
       <PackagePath>Images\defendBtn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\defendBtn_click.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\defendBtn_click.png">
       <PackagePath>Images\defendBtn_click.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\mylogo.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\mylogo.png">
       <PackagePath>Images\mylogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\newRoomBtn.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\newRoomBtn.png">
       <PackagePath>Images\newRoomBtn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\newRoomBtn_click.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\newRoomBtn_click.png">
       <PackagePath>Images\newRoomBtn_click.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\overturnBtn.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\overturnBtn.png">
       <PackagePath>Images\overturnBtn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\overturnBtn_click.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\overturnBtn_click.png">
       <PackagePath>Images\overturnBtn_click.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\quickJoinBtn.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\quickJoinBtn.png">
       <PackagePath>Images\quickJoinBtn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\quickJoinBtn_click.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\quickJoinBtn_click.png">
       <PackagePath>Images\quickJoinBtn_click.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\ready.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\ready.png">
       <PackagePath>Images\ready.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\regist.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\regist.png">
       <PackagePath>Images\regist.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\room.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room.png">
       <PackagePath>Images\room.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\title.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room0.png">
+      <PackagePath>Images\room0.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room1.png">
+      <PackagePath>Images\room1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room2.png">
+      <PackagePath>Images\room2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room3.png">
+      <PackagePath>Images\room3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room4.png">
+      <PackagePath>Images\room4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room5.png">
+      <PackagePath>Images\room5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room6.png">
+      <PackagePath>Images\room6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room7.png">
+      <PackagePath>Images\room7.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room8.png">
+      <PackagePath>Images\room8.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\room9.png">
+      <PackagePath>Images\room9.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\title.png">
       <PackagePath>Images\title.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\useBtn.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\useBtn.png">
       <PackagePath>Images\useBtn.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Images\useBtn_click.png">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Images\useBtn_click.png">
       <PackagePath>Images\useBtn_click.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Common\ReadMe.txt">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Musics\loggin.mp3">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Musics\loggin.mp3">
       <PackagePath>Musics\loggin.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Musics\数码宝贝OL音乐2（流畅）.mp3">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Musics\数码宝贝OL音乐2（流畅）.mp3">
       <PackagePath>Musics\数码宝贝OL音乐2（流畅）.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\Musics\数码宝贝OL音乐3（流畅）.mp3">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\Musics\数码宝贝OL音乐3（流畅）.mp3">
       <PackagePath>Musics\数码宝贝OL音乐3（流畅）.mp3</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\AttractCards.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\AttractCards.xaml">
       <PackagePath>AttractCards.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\Cards.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\Cards.xaml">
       <PackagePath>Cards.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\GameLobbyPage.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\GameLobbyPage.xaml">
       <PackagePath>GameLobbyPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\GamePage.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\GamePage.xaml">
       <PackagePath>GamePage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\RegistPage.xaml">
-      <PackagePath>RegistPage.xaml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\Common\StandardStyles.xaml">
-      <PackagePath>Common\StandardStyles.xaml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\LoginPage.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\LoginPage.xaml">
       <PackagePath>LoginPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\RoomCard.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\RegistPage.xaml">
+      <PackagePath>RegistPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\RoomCard.xaml">
       <PackagePath>RoomCard.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\TestSocketIO.xaml">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\TestSocketIO.xaml">
       <PackagePath>TestSocketIO.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Users\王永淳\Desktop\DigimonCards\DigimonCard\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="F:\Users\el1ven2013\Documents\DigimonCards\DigimonCard\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

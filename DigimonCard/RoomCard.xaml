@@ -5,16 +5,12 @@
     xmlns:local="using:DigimonCard"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="312.94" Width="238.806">
+    mc:Ignorable="d" Height="312.94" Width="212.134">
 
-    <Grid Margin="10" PointerPressed="BeSelect">
-        <Grid x:FieldModifier="Public" x:Name="ClickBox" HorizontalAlignment="Left" Height="302" Margin="-3,-6,-2,-3" VerticalAlignment="Top" Width="220" Background="#FF0051FF" Opacity="0.8" Visibility="Collapsed"/>
-
-        <Image x:Name="HostPhoto" HorizontalAlignment="Left" Height="54" Margin="27,67,0,0" VerticalAlignment="Top" Width="57"/>
-        <Image x:Name="ChallengerPhoto" HorizontalAlignment="Left" Height="54" Margin="149,195,0,0" VerticalAlignment="Top" Width="57" PointerPressed="JoinIn_byPhoto"/>
-        <Image HorizontalAlignment="Left" Height="293" Margin="6,-1,0,0" VerticalAlignment="Top" Width="209" Source="Images/room.png" Stretch="Fill"/>
-        <TextBlock HorizontalAlignment="Left" Margin="128,0,0,270" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="20" Width="45" Foreground="Black" Text="房间" FontSize="18" FontWeight="Bold" FontFamily="Arial Black" TextAlignment="Center"/>
-        <TextBlock x:Name="roomNum" HorizontalAlignment="Left" Margin="175,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="31" FontSize="18" FontFamily="Arial Black" TextAlignment="Center" Foreground="Black"/>
+    <Grid Margin="10,0,0,10" >
+        <Image x:FieldModifier="public" x:Name="roomPng" HorizontalAlignment="Left" Height="296" VerticalAlignment="Top" Width="197" Source="Images/room1.png" Stretch="Fill" Margin="-5,-3,0,0" PointerPressed="BeSelect"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,37,0,241" TextWrapping="Wrap" Width="45" Foreground="White" Text="房间" FontSize="18" FontWeight="Bold" FontFamily="Arial Black" TextAlignment="Center" RenderTransformOrigin="0.479,4.016"/>
+        <TextBlock x:Name="roomNum" HorizontalAlignment="Left" Margin="108,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="31" FontSize="18" FontFamily="Arial Black" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.532,0.544"/>
 
     </Grid>
 </UserControl>

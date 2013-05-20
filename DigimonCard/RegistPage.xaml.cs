@@ -69,7 +69,7 @@ namespace DigimonCard
                 MessageDialog md = new MessageDialog("密码长度请超过6位哦~亲~", "错误");
                 await md.ShowAsync();
             }
-            else if (!Regex.IsMatch(nname, chinese) )
+            else if (!Regex.IsMatch(nname, chinese))
             {
                 MessageDialog md = new MessageDialog("用户名不能有奇奇怪怪的东西哦~亲~", "错误");
                 await md.ShowAsync();
@@ -123,15 +123,15 @@ namespace DigimonCard
                 MessageDialog md = new MessageDialog("账号已经存在了哦~亲~", "错误");
                 await md.ShowAsync();
             }
-            else if(resBody.Equals("success"))
+            else if (resBody.Equals("success"))
             {
                 MessageDialog md = new MessageDialog("亲~注册成功了哦，恭喜你啊~亲~", "错误");
                 await md.ShowAsync();
                 Frame.Navigate(typeof(LoginPage));
             }
-            
+
         }
 
-       
+
     }
 }

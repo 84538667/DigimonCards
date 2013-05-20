@@ -82,7 +82,7 @@ namespace DigimonCard
             //禁止多次点击，要不李昱东同学那受不了。。
             this.login_button.IsEnabled = false;
 
-            //this.Frame.Navigate(typeof(GameLobbyPage));
+            this.Frame.Navigate(typeof(GameLobbyPage));
             pname = this.player_name.Text;
             ppwd = this.player_pwd.Password;
 
