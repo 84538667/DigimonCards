@@ -23,8 +23,10 @@ namespace DigimonCard
     public sealed partial class GameLobbyPage : DigimonCard.Common.LayoutAwarePage
     {
         public RoomCard[] roomCard = new RoomCard[100];
+        public Cards[] cards = new Cards[51];
         public int roomCard_buffer;
         public bool isFirst_Click = false;
+        public bool isChooseCardsbegin = false;
         public static Uri baseUri = new Uri("ms-appx:///");
         public int currentPageNum = 1;
 
@@ -46,6 +48,19 @@ namespace DigimonCard
                 }
             for (int i = 4; i < 100; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+
+            for (int i = 0; i < 17; i++)
+                for (int j = 0; j < 3; j++)
+                {
+                    cards[i * 3 + j] = new Cards();
+                    Canvas.SetLeft(cards[i * 3 + j], i * 100 + 10);
+                    Canvas.SetTop(cards[i * 3 + j], j * 150 + 50);
+                    Canvas_cards.Children.Add(cards[i * 3 + j]);
+                }
+
+            storyboard_appear.Completed += storyboard_artWordBegin;
+            storyboard_artWord.Completed += storyboard_artWord_completed;
+            storyboard_visible.Completed += storyboard_visible_Completed;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
         }
@@ -71,6 +86,24 @@ namespace DigimonCard
         /// <param name="pageState">要使用可序列化状态填充的空字典。</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void storyboard_artWordBegin(object sender, object e)
+        {
+            storyboard_artWord.Begin();
+        }
+
+        private void storyboard_artWord_completed(object sender, object e)
+        {
+            storyboard_visible.Begin();
+        }
+
+        private void storyboard_visible_Completed(object sender, object e)
+        {
+            for (int i = 0; i < 51; i++)
+            {
+                cards[i].turn2front();
+            }
         }
 
         private void roomCard_pressed(object sender, PointerRoutedEventArgs e)
@@ -164,6 +197,37 @@ namespace DigimonCard
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Visible;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
+        }
+
+        private void cardsInHand_click(object sender, RoutedEventArgs e)
+        {
+            if (isChooseCardsbegin == false)
+            {
+                maskPanel.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                storyboard_appear.Begin();
+                isChooseCardsbegin = true;
+                chooseCardBtn.Content = "完成";
+            }
+            else
+            {
+                storyboard_disapp.Begin();
+                isChooseCardsbegin = false;
+                storyboard_disapp.Completed += storyboard_disapp_Completed;
+            }
+        }
+
+        private void storyboard_disapp_Completed(object sender, object e)
+        {
+            maskPanel.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            chooseCardBtn.Content = "手牌";
+            Canvas_cards.Opacity = 0;
+
+            BitmapImage bitmapimage = new BitmapImage();
+            bitmapimage.UriSource = new Uri("ms-appx:///Images/cardBack.png");
+
+            for (int i = 0; i < 51; i++)
+                cards[i].image.Source = bitmapimage;
+
         }
 
 

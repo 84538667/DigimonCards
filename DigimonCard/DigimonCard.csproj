@@ -102,8 +102,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="cards\AttractCards.cs" />
-    <Compile Include="cards\AC.cs" />
+    <Compile Include="AttractCards.xaml.cs">
+      <DependentUpon>AttractCards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards.xaml.cs">
+      <DependentUpon>Cards.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\BooleanNegationConverter.cs" />
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
@@ -120,7 +124,6 @@
     <Compile Include="RegistPage.xaml.cs">
       <DependentUpon>RegistPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Deck.cs" />
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\SplashScreen.jpg" />
+    <Content Include="Assets\WideLogo.jpg" />
     <Content Include="Images\artWord.png" />
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\LightGray.png" />
@@ -186,6 +191,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AttractCards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GameLobbyPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

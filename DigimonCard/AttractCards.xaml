@@ -1,0 +1,14 @@
+﻿<my:Cards
+    x:Class="DigimonCard.AttractCards"
+    xmlns:my="using:DigimonCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigimonCard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="114" Width="85">
+
+    <Grid x:Name="grid">
+        <Image x:Name="image" HorizontalAlignment="Center" Height="114" VerticalAlignment="Center" Width="85" Source="Images/cardBack.png" Margin="1,0,-1,0"/>
+    </Grid>
+</my:Cards>

@@ -23,7 +23,7 @@
         </TextBlock>
         <Image HorizontalAlignment="Left" Height="267" Margin="363,285,0,0" VerticalAlignment="Top" Width="677" Source="Images/title.png"/>
         <Button x:Name="player_regist" Content="没有注册的亲们，请猛戳这里！！&#xD;&#xA;" HorizontalAlignment="Left" Margin="126,632,0,0" VerticalAlignment="Top" Width="467" FontSize="20" Height="52" Click="player_regist_Click"/>
-        <Button x:Name="login_button" Content="登陆" HorizontalAlignment="Left" Margin="664,430,0,0" VerticalAlignment="Top" Width="148" Height="76" FontSize="36" Click="Button_Click"/>
+        <Button x:Name="login_button" Content="登录" HorizontalAlignment="Left" Margin="664,430,0,0" VerticalAlignment="Top" Width="148" Height="76" FontSize="36" Click="Button_Click"/>
         <MediaElement HorizontalAlignment="Left" Height="52" Margin="664,632,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5" Source="Musics/loggin.mp3" Volume="0.5"/>
         <PasswordBox x:Name="player_pwd" HorizontalAlignment="Left" Margin="269,502,0,0" VerticalAlignment="Top" Width="304" Height="46" RenderTransformOrigin="0.487,0.46" Background="#FF21D9E2"/>
         <Button Content="ScoketIO test!!" HorizontalAlignment="Left" Margin="763,183,0,0" VerticalAlignment="Top" Width="305" Height="76" FontSize="36" Click="TEST_Click"/>

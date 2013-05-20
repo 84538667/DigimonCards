@@ -29,7 +29,8 @@ namespace DigimonCard
         public GamePage()
         {
             this.InitializeComponent();
-            storyboard_appear.Completed += storyboard_artWordBegin;
+
+            Storyboard_uiBe.Completed += Storyboard_uiBe_Completed;
         }
 
         /// <summary>
@@ -55,9 +56,10 @@ namespace DigimonCard
         {
         }
 
-        private void storyboard_artWordBegin(object sender, object e)
+        void Storyboard_uiBe_Completed(object sender, object e)
         {
-            storyboard_artWord.Begin();
+            uiAfterGameBegin.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            Storyboard_uiAf.Begin();
         }
 
         private void hostReadyBtn_pressed(object sender, PointerRoutedEventArgs e)
@@ -77,8 +79,7 @@ namespace DigimonCard
                         break;
                     case 1:
                         readyPersonNum = 2;
-                        maskPanel.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                        storyboard_appear.Begin();
+                        Storyboard_uiBe.Begin();
                         break;
                 }
             }
@@ -119,8 +120,7 @@ namespace DigimonCard
                         break;
                     case 1:
                         readyPersonNum = 2;
-                        maskPanel.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                        storyboard_appear.Begin();
+                        Storyboard_uiBe.Begin();
                         break;
                 }
             }
