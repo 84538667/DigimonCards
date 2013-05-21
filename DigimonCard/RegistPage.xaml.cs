@@ -85,7 +85,9 @@ namespace DigimonCard
         public async void Regist(String username, String password, String com_password)
         {
             //服务器url地址
-            Uri url = new Uri("http://168.63.151.29:3000/reg/");
+            //Uri url = new Uri("http://168.63.151.29:3000/reg/");
+
+            Uri url = new Uri("http://test.twtstudio.com:3000/reg/");
             //post请求键值对
             HttpContent con = new FormUrlEncodedContent(new Dictionary<string, string>()
             {

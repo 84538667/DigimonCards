@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Web;
 using SocketIOClient;
 using Windows.UI.Core;
+using Newtonsoft.Json;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -50,37 +51,40 @@ namespace DigimonCard
 
         public void createConnect()
         {
-            socketIO = new Client("http://168.63.151.29:3000");
+            //socketIO = new Client("http://168.63.151.29:3000");
+
+            socketIO = new Client("http://test.twtstudio.com:3000/");
             socketIO.Message += socketIO_Message;
             socketIO.SocketConnectionClosed += socketIO_SocketConnectionClosed;
             socketIO.Error += socketIO_Error;
 
-            this.listenTbx.Text = "aa";
-            this.listenTbx.Text += "bb";
-
             socketIO.On("connect", (message) =>
             {
-
                 Debug.WriteLine("on connect called!!!");
                 JObject jo = new JObject();
-                jo["publisher"] = "username";
-                jo["password"] = "password";
-                socketIO.Emit("hConnect", jo);
+                jo["username"] = "abc";
+                socketIO.Emit("new_connect", jo);
             });
 
-            socketIO.ConnectAsync();
 
-            socketIO.On("a", async (message) =>
+            socketIO.On("chat", async (message) =>
             {
                 s = message.Json.ToJsonString();
                 Debug.WriteLine("start listening");
                 Debug.WriteLine(message.Json.ToJsonString());
                 await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
-                    ChangedEventHandler(message.Json.ToJsonString());
+                    JObject o = (JObject)JsonConvert.DeserializeObject(message.Json.ToJsonString());
+                    JArray jb = (JArray)JsonConvert.DeserializeObject(o["args"].ToString());
+                    JObject ob = (JObject)jb[0];
+                    JObject oc = (JObject)ob["mes"];
+
+                    if (oc["chat"] != null)
+                    ChangedEventHandler(oc["chat"].ToString());
                 });
             });
 
+            socketIO.ConnectAsync();
         }
         /// <summary>
         /// 使用在导航过程中传递的内容填充页。在从以前的会话
@@ -232,15 +236,16 @@ namespace DigimonCard
             {
                 Debug.WriteLine("on send connect called!!!");
                 //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
-                string s = "{\"a\":\"" + this.sendTbx.Text + "\"}";
-                socketIO.Emit("hConnect", JObject.Parse(s));
+                string s = "{\"chat\":\"" + this.sendTbx.Text + "\"}";
+                socketIO.Emit("client_chat", JObject.Parse(s));
 
             }
         }
 
         private void ChangedEventHandler(string s)
         {
-            this.listenTbx.Text += s;
+            this.listenTbx.Text += s + "\n";
+            this.sendTbx.Text = "";
         }
 
         private void pop_fold_Btn_Click(object sender, RoutedEventArgs e)

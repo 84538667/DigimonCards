@@ -15,7 +15,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="34,134,0,0" TextWrapping="Wrap" Text="JsonString: " FontSize="20" VerticalAlignment="Top"/>
         <TextBox Name="listenTbx"  HorizontalAlignment="Left" Margin="148,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" Height="145" />
         <Button x:Name="listenBt" Content="Listen" HorizontalAlignment="Left" Margin="732,272,0,0" VerticalAlignment="Top" Click="listenBt_Click" Width="108"/>
-        <Button x:Name="refresh" Content="refresh" HorizontalAlignment="Left" Margin="581,491,0,0" VerticalAlignment="Top" Click="refresh_Click"/>
 
     </Grid>
 </Page>

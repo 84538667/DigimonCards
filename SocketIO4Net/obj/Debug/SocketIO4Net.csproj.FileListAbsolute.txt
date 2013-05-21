@@ -24,3 +24,16 @@ F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\obj\Debug\layout.resfile
 F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\obj\Debug\resources.resfiles
 F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\obj\Debug\pri.resfiles
 F:\Users\el1ven2013\Documents\DigimonCards\SocketIO4Net\obj\Debug\LanguageQualifiers.txt
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.dll
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pdb
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pri
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.csprojResolveAssemblyReference.cache
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.dll
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.pdb
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\priconfig.xml
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\layout.resfiles
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\resources.resfiles
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\pri.resfiles
+C:\Users\lhc\Documents\GitHub\DigimonCards\SocketIO4Net\obj\Debug\LanguageQualifiers.txt

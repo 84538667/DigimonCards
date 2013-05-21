@@ -82,7 +82,7 @@ namespace DigimonCard
             //禁止多次点击，要不李昱东同学那受不了。。
             this.login_button.IsEnabled = false;
 
-            this.Frame.Navigate(typeof(GameLobbyPage));
+            //this.Frame.Navigate(typeof(GameLobbyPage));
             pname = this.player_name.Text;
             ppwd = this.player_pwd.Password;
 
@@ -93,6 +93,8 @@ namespace DigimonCard
             }
             else
             {
+
+                this.login_button.IsEnabled = true;
                 MessageDialog md = new MessageDialog("请输入用户名/密码", "错误");
                 await md.ShowAsync();
             }
@@ -103,7 +105,9 @@ namespace DigimonCard
         {
             this.login_button.IsEnabled = false;
             //服务器url地址
-            Uri url = new Uri("http://168.63.151.29:3000/login/");
+            //Uri url = new Uri("http://168.63.151.29:3000/login/");
+
+            Uri url = new Uri("http://test.twtstudio.com:3000/login/");
             //post请求键值对
             HttpContent con =  new FormUrlEncodedContent(new Dictionary<string, string>()
             {

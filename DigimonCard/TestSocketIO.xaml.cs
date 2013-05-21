@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Web;
 using SocketIOClient;
 using Windows.UI.Core;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,7 +31,6 @@ namespace DigimonCard
     public sealed partial class TestSocketIO : Page
     {
         private Client socketIO;
-        String s;
         private CoreDispatcher SampleDispatcher;
 
         public TestSocketIO()
@@ -60,6 +60,7 @@ namespace DigimonCard
                 Debug.WriteLine("--> SOCKET_IO_MESSAGE:: {0} : {1}", e.Message.Event, e.Message.Json.ToJsonString());
                 //screenTbk.Text += e.Message.Json.ToJsonString();
             }
+
         }
 
         //哭了，貌似socketIO中on事件里会发生这个闹心的问题啊
@@ -69,21 +70,52 @@ namespace DigimonCard
         private void connectBt_Click(object sender, RoutedEventArgs e)
         {
             //socketIO = new Client(serverUrl.Text);
-            socketIO = new Client("http://168.63.151.29:3000");
+            //socketIO = new Client("http://168.63.151.29:3000");
+            this.connectBt.IsEnabled = false;
+            socketIO = new Client("http://test.twtstudio.com:3000");
             socketIO.Message += socketIO_Message;
             socketIO.SocketConnectionClosed += socketIO_SocketConnectionClosed;
             socketIO.Error += socketIO_Error;
 
-            this.listenTbx.Text = "aa";
-            this.listenTbx.Text += "bb";
-
             socketIO.On("connect", (message) => 
-            {  
+            {
+                
                 Debug.WriteLine("on connect called!!!");
                 JObject jo = new JObject();
-                jo["publisher"] = "username";
+                jo["username"] = "username";
                 jo["password"] = "password";
                 socketIO.Emit("hConnect", jo);
+
+            });
+
+            socketIO.On("a", async (message) =>
+            {
+                Debug.WriteLine("start listening");
+                Debug.WriteLine(message.Json.ToJsonString());
+                await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+                    /*//定义一个JSON字符串 
+                    string jsonText = "[{'a':'aaa','b':'bbb','c':'ccc'},{'a':'aaa2','b':'bbb2','c':'ccc2'}]";
+                    //反序列化JSON字符串*/
+                    //JArray ja = (JArray)JsonConvert.DeserializeObject(message.Json.ToJsonString());
+                   // JArray ja = (JArray)JsonConvert.DeserializeObject(jsonText);
+                    //将反序列化的JSON字符串转换成对象
+                    JObject o = (JObject)JsonConvert.DeserializeObject(message.Json.ToJsonString());
+                    //读取对象中的各项值
+                    JArray jb = (JArray)JsonConvert.DeserializeObject(o["args"].ToString());
+
+                    JObject ob = (JObject)jb[0];
+
+                    JObject oc = (JObject)ob["mes"];
+
+                    //Console.WriteLine(ja[1]["a"]);  
+                    
+                   // ChangedEventHandler(message.Json.ToJsonString());
+
+                    if(oc["a"] != null )
+                        ChangedEventHandler(oc["a"].ToString());
+                    //{"name":"a","args":[{"mes":{"username":"username","password":"password"}}]}
+                });
             });
 
             socketIO.ConnectAsync();
@@ -147,26 +179,19 @@ namespace DigimonCard
         {
             socketIO.On("a", async (message) => 
             {
-                s = message.Json.ToJsonString();
                 Debug.WriteLine("start listening");
                 Debug.WriteLine(message.Json.ToJsonString());
                 await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                    {
-                        ChangedEventHandler(message.Json.ToJsonString());
-                    });
+                {
+                    ChangedEventHandler(message.Json.ToJsonString());
+                });
             });
         }
 
         private void ChangedEventHandler(string s)
         {
-            this.listenTbx.Text += s;
+            this.listenTbx.Text += s + "\n";
         }
-
-        private void refresh_Click(object sender, RoutedEventArgs e)
-        {
-            this.listenTbx.Text += "\n"+s;
-        }
-
 
     }
 }
