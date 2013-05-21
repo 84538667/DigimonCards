@@ -36,7 +36,6 @@ namespace DigimonCard
         public bool hostIsReady = false;
         public bool challengerIsReady = false;
         private Client socketIO;
-        String s;
         private CoreDispatcher SampleDispatcher;
 
         public GamePage()
@@ -63,14 +62,13 @@ namespace DigimonCard
             {
                 Debug.WriteLine("on connect called!!!");
                 JObject jo = new JObject();
-                jo["username"] = "abc";
-                socketIO.Emit("new_connect", jo);
+                jo["username"] = "wycsb";
+                socketIO.Emit("join", jo);
             });
 
 
             socketIO.On("chat", async (message) =>
             {
-                s = message.Json.ToJsonString();
                 Debug.WriteLine("start listening");
                 Debug.WriteLine(message.Json.ToJsonString());
                 await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
@@ -78,10 +76,9 @@ namespace DigimonCard
                     JObject o = (JObject)JsonConvert.DeserializeObject(message.Json.ToJsonString());
                     JArray jb = (JArray)JsonConvert.DeserializeObject(o["args"].ToString());
                     JObject ob = (JObject)jb[0];
-                    JObject oc = (JObject)ob["mes"];
 
-                    if (oc["chat"] != null)
-                        ChangedEventHandler(oc["username"]+":"+oc["chat"].ToString());
+                    if (ob["roomNum"].ToString().Equals(Self.roomNum.ToString()))
+                        ChangedEventHandler(ob["username"]+":"+ob["chat"]);
                 });
             });
 
@@ -222,22 +219,13 @@ namespace DigimonCard
             Debug.WriteLine(">>>socketIO_SocketConnectionClosed::Closed!");
         }
 
-        // 断开连接的控件，现已删除 
-        //private void disConnectBt_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //if (socketIO != null)
-        //    //{
-        //    socketIO.Close();
-        //    // }
-        //}
-
         private void sendBtn_click(object sender, RoutedEventArgs e)
         {
             if (socketIO != null && socketIO.IsConnected && !this.sendTbx.Text.Equals(""))
             {
                 Debug.WriteLine("on send connect called!!!");
                 //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
-                string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
+                string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"roomNum\":\"" + Self.roomNum.ToString() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
                 socketIO.Emit("client_chat", JObject.Parse(s));
 
             }
@@ -272,7 +260,7 @@ namespace DigimonCard
                 {
                     Debug.WriteLine("on send connect called!!!");
                     //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
-                    string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
+                    string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"roomNum\":\"" + Self.roomNum.ToString() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
                     socketIO.Emit("client_chat", JObject.Parse(s));
 
                 }

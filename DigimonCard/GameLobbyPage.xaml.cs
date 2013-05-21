@@ -36,7 +36,8 @@ namespace DigimonCard
         public GameLobbyPage()
         {
             this.InitializeComponent();
-            Gule.Begin();
+
+            Self.roomNum = 0;
 
             for (int i = 0 ; i < 17 ; i++)
                 for (int j = 0 ; j < 3 ; j++)
@@ -51,7 +52,9 @@ namespace DigimonCard
             for (int i = 0; i < currentPageTotalRoomNum * totalPage; i++)
             {
                 roomCard[i] = new RoomCard(i + 1);
-                roomCard[i].PointerPressed += roomCard_pressed;
+                roomCard[i].PointerEntered += roomCard_Entered;
+                roomCard[i].PointerEntered += roomCard_Exited;
+                roomCard[i].PointerPressed += roomCard_Enter;
             }
             for (int i = 0; i < totalPage; i++)
             {
@@ -74,7 +77,6 @@ namespace DigimonCard
             storyboard_appear.Completed += storyboard_artWordBegin;
             storyboard_artWord.Completed += storyboard_artWord_completed;
             storyboard_visible.Completed += storyboard_visible_Completed;
-            Gule.Completed += storyboard_guleshou_Completed;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
         }
@@ -120,36 +122,35 @@ namespace DigimonCard
             }
         }
 
-        private void storyboard_guleshou_Completed(object sender, object e)
-        {
-
-            gule1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            gule2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            gule3.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            gule4.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            gule5.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Gule.Begin();
-        }
-
-        private void roomCard_pressed(object sender, PointerRoutedEventArgs e)
+        private void roomCard_Entered(object sender, PointerRoutedEventArgs e)
         {
             for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
                 if (roomCard[i] == (RoomCard)sender)
                 {
-                    if (isFirst_Click == true)
-                        isFirst_Click = false;
-                    else if (i == roomCard_buffer)
-                        roomCard[i].roomPng.Opacity = 0.7;
-                    else
-                    {
-                        roomCard[i].roomPng.Opacity = 0.7;
-                        roomCard[roomCard_buffer].roomPng.Opacity = 1.0;
-                    }
-                    roomCard_buffer = i;
+                    roomCard[i].roomPng.Opacity = 0.7;
                 }
-            
-                
-             
+        }
+
+        private void roomCard_Exited(object sender, PointerRoutedEventArgs e)
+        {
+            for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
+                if (roomCard[i] == (RoomCard)sender)
+                {
+                    roomCard[i].roomPng.Opacity = 1.0;
+                }
+        }
+
+        private void roomCard_Enter(object sender, PointerRoutedEventArgs e)
+        {
+            for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
+                if (roomCard[i] == (RoomCard)sender)
+                {
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.UriSource = new Uri("ms-appx:///Images/QuickJoinBtn.png");
+                    QuickJoinBtn.Source = bitmapImage;
+                    Self.roomNum = i;
+                    this.Frame.Navigate(typeof(GamePage));
+                }
         }
 
         private void NewRoomBtn_pressed(object sender, PointerRoutedEventArgs e)

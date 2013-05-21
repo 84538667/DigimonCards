@@ -17,8 +17,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using SocketIO4Net;
-using SocketIOClient;
 
 // “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上有介绍
 
@@ -30,7 +28,6 @@ namespace DigimonCard
     public sealed partial class LoginPage : Page
     {
         DatagramSocket udpSocket;
-        DataWriter udpWriter;
 
         private String pname;
         private String ppwd;
@@ -39,8 +36,8 @@ namespace DigimonCard
         {
             this.InitializeComponent();
 
-            smallMove.Begin();
             ConnectedToServer();
+
         }
 
         public async void ConnectedToServer()
@@ -76,23 +73,9 @@ namespace DigimonCard
             Frame.Navigate(typeof(RegistPage));
         }
 
-        public bool IsConnected()
-        {
-            int connectionDescription = 0;
-            //判断是否连接到外网上的函数，并返回布尔值
-            return true; 
-                //InternetGetConnectedState(out connectionDescription, 0);
-        }
-
         //登陆Button点击事件
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(!IsConnected()){
-                MessageDialog md = new MessageDialog("未连接网络，请重试", "错误");
-                await md.ShowAsync();
-                return;
-            }
-
             //禁止多次点击，要不李昱东同学那受不了。。
             this.login_button.IsEnabled = false;
 
@@ -107,8 +90,6 @@ namespace DigimonCard
             }
             else
             {
-
-                this.login_button.IsEnabled = true;
                 MessageDialog md = new MessageDialog("请输入用户名/密码", "错误");
                 await md.ShowAsync();
             }
@@ -120,7 +101,6 @@ namespace DigimonCard
             this.login_button.IsEnabled = false;
             //服务器url地址
             //Uri url = new Uri("http://168.63.151.29:3000/login/");
-
             Uri url = new Uri("http://test.twtstudio.com:3000/login/");
             //post请求键值对
             HttpContent con =  new FormUrlEncodedContent(new Dictionary<string, string>()
@@ -164,6 +144,7 @@ namespace DigimonCard
             if (resBody.Equals("success"))
             {
                 Self.self.SetName(this.player_name.Text);
+                Self.roomNum = 0;
                 Frame.Navigate(typeof(GameLobbyPage));
             }
             else
@@ -178,8 +159,6 @@ namespace DigimonCard
         {
             Frame.Navigate(typeof(TestSocketIO));
         }
-
-        
     }
 
 }

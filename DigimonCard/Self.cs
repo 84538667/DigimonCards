@@ -8,6 +8,7 @@ namespace DigimonCard
 {
     class Self
     {
+        public static int roomNum = 0;
         public static Player self = new Player(null, 0, 0, 0, 0, 0, null, null);
     }
 }
