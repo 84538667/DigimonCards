@@ -22,6 +22,8 @@ using SocketIOClient;
 using Windows.UI.Core;
 using Newtonsoft.Json;
 using Windows.System;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -36,6 +38,9 @@ namespace DigimonCard
         public bool hostIsReady = false;
         public bool challengerIsReady = false;
         private Client socketIO;
+        public bool isChooseCardsbegin = false;
+        private bool _isFullscreenToggle = false;
+        private Size _previousVideoContainerSize = new Size();
         private CoreDispatcher SampleDispatcher;
         public int win_width = (int)Window.Current.Bounds.Width;
         public int win_height = (int)Window.Current.Bounds.Height;
@@ -44,14 +49,54 @@ namespace DigimonCard
         {
             this.InitializeComponent();
 
+            maskPanel.Width = win_width;
+            maskPanel.Height = win_height;
+            Canvas.SetLeft(mediaPlayPanel, win_width / 2 - 500);
+            Canvas.SetLeft(mylogo, win_width - 110);
+            Canvas.SetLeft(panelPopBtn, win_width - 92);
             Canvas.SetTop(chatPanel, win_height - 438);
+            Canvas.SetLeft(esc_fullscreen, win_width - 75);
             roomNum.Text = Self.roomNum.ToString();
             vedioNum.Text = Self.roomNum.ToString();
 
             SampleDispatcher = Window.Current.CoreWindow.Dispatcher; //此实例是负责处理窗口消息，事件调度给客户端。
 
             createConnect();
+            chooseVedioUrl();
 
+            storyboard_disapp.Completed += storyboard_disapp_Completed;
+
+        }
+
+        public void chooseVedioUrl()
+        {
+            switch (Self.roomNum)
+            {
+                case 1:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/001.mp4", UriKind.Absolute);
+                    break;
+                case 2:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/002.mp4", UriKind.Absolute);
+                    break;
+                case 3:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/003.mp4", UriKind.Absolute);
+                    break;
+                case 4:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/004.mp4", UriKind.Absolute);
+                    break;
+                case 5:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/005.mp4", UriKind.Absolute);
+                    break;
+                case 6:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/006.mp4", UriKind.Absolute);
+                    break;
+                case 7:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/007.mp4", UriKind.Absolute);
+                    break;
+                case 8:
+                    mediaElement.Source = new Uri("http://service.twtstudio.com/phone/games/008.mp4", UriKind.Absolute);
+                    break;
+            }
         }
 
         public void createConnect()
@@ -221,5 +266,295 @@ namespace DigimonCard
             }
             Frame.Navigate(typeof(GameLobbyPage));
         }
+
+        private void cardsInHand_click(object sender, RoutedEventArgs e)
+        {
+            if (isChooseCardsbegin == false)
+            {
+                maskPanel.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                storyboard_appear.Begin();
+                isChooseCardsbegin = true;
+                panelPopBtn.Content = "完成";
+            }
+            else
+            {
+                storyboard_disapp.Begin();
+                isChooseCardsbegin = false;
+                mediaElement.Stop();
+                storyboard_disapp.Completed += storyboard_disapp_Completed;
+            }
+        }
+
+        private void storyboard_disapp_Completed(object sender, object e)
+        {
+            maskPanel.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            panelPopBtn.Content = "播放";
+
+            BitmapImage bitmapimage = new BitmapImage();
+            bitmapimage.UriSource = new Uri("ms-appx:///Images/cardBack.png");
+
+        }
+
+        public bool IsFullscreen
+        {
+            get { return _isFullscreenToggle; }
+            set { _isFullscreenToggle = value; }
+        }
+
+        private void FullscreenToggle()
+        {
+            this.IsFullscreen = !this.IsFullscreen;
+
+            if (this.IsFullscreen)
+            {    
+                TransportControlsPanel.Visibility = Visibility.Collapsed;
+
+                _previousVideoContainerSize.Width = videoContainer.ActualWidth;
+                _previousVideoContainerSize.Height = videoContainer.ActualHeight;
+
+                videoContainer.Width = Window.Current.Bounds.Width;
+                videoContainer.Height = Window.Current.Bounds.Height;
+                mediaElement.Width = Window.Current.Bounds.Width;
+                mediaElement.Height = Window.Current.Bounds.Height;
+
+                esc_fullscreen.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+            else
+            {
+                TransportControlsPanel.Visibility = Visibility.Visible;
+
+                videoContainer.Width = _previousVideoContainerSize.Width;
+                videoContainer.Height = _previousVideoContainerSize.Height;
+                mediaElement.Width = _previousVideoContainerSize.Width;
+                mediaElement.Height = _previousVideoContainerSize.Height;
+            }
+        }
+
+        private void btnFullScreenToggle_Click(object sender, RoutedEventArgs e)
+        {
+            FullscreenToggle();
+        }
+
+        private void esc_fullscreen_click(object sender, RoutedEventArgs e)
+        {
+            FullscreenToggle();
+            esc_fullscreen.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            if (mediaElement.DefaultPlaybackRate != 1)
+            {
+                mediaElement.DefaultPlaybackRate = 1.0;
+            }
+
+            mediaElement.Play();
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Pause();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Stop();
+        }
+
+        private void btnVolumeDown_Click(object sender, RoutedEventArgs e)
+        {
+            if (mediaElement.IsMuted)
+            {
+                mediaElement.IsMuted = false;
+            }
+
+            if (mediaElement.Volume < 1)
+            {
+                mediaElement.Volume += .1;
+            }
+        }
+
+        private void btnMute_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.IsMuted = !mediaElement.IsMuted;
+        }
+
+        private void btnVolumeUp_Click(object sender, RoutedEventArgs e)
+        {
+            if (mediaElement.IsMuted)
+            {
+                mediaElement.IsMuted = false;
+            }
+
+            if (mediaElement.Volume > 0)
+            {
+                mediaElement.Volume -= .1;
+            }
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            timelineSlider.ValueChanged += timelineSlider_ValueChanged;
+
+            PointerEventHandler pointerpressedhandler = new PointerEventHandler(slider_PointerEntered);
+            timelineSlider.AddHandler(Control.PointerPressedEvent, pointerpressedhandler, true);
+
+            PointerEventHandler pointerreleasedhandler = new PointerEventHandler(slider_PointerCaptureLost);
+            timelineSlider.AddHandler(Control.PointerCaptureLostEvent, pointerreleasedhandler, true);
+        }
+
+        void videoElement_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            double absvalue = (int)Math.Round(
+                mediaElement.NaturalDuration.TimeSpan.TotalSeconds,
+                MidpointRounding.AwayFromZero);
+
+            timelineSlider.Maximum = absvalue;
+
+            timelineSlider.StepFrequency =
+                SliderFrequency(mediaElement.NaturalDuration.TimeSpan);
+
+            SetupTimer();
+        }
+
+        private bool _sliderpressed = false;
+
+        void slider_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            _sliderpressed = true;
+        }
+
+        void slider_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
+        {
+            mediaElement.Position = TimeSpan.FromSeconds(timelineSlider.Value);
+            _sliderpressed = false;
+        }
+
+        void timelineSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+            if (!_sliderpressed)
+            {
+                mediaElement.Position = TimeSpan.FromSeconds(e.NewValue);
+            }
+        }
+
+        void videoMediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
+        {
+            if (mediaElement.CurrentState == MediaElementState.Playing)
+            {
+                if (_sliderpressed)
+                {
+                    _timer.Stop();
+                }
+                else
+                {
+                    _timer.Start();
+                }
+            }
+
+            if (mediaElement.CurrentState == MediaElementState.Paused)
+            {
+                _timer.Stop();
+            }
+
+            if (mediaElement.CurrentState == MediaElementState.Stopped)
+            {
+                _timer.Stop();
+                timelineSlider.Value = 0;
+            }
+        }
+
+        void videoMediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            StopTimer();
+            timelineSlider.Value = 0.0;
+        }
+
+        private void videoMediaElement_MediaFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            // get HRESULT from event args 
+            string hr = GetHresultFromErrorMessage(e);
+
+            // Handle media failed event appropriately 
+        }
+
+        private string GetHresultFromErrorMessage(ExceptionRoutedEventArgs e)
+        {
+            String hr = String.Empty;
+            String token = "HRESULT - ";
+            const int hrLength = 10;     // eg "0xFFFFFFFF"
+
+            int tokenPos = e.ErrorMessage.IndexOf(token, StringComparison.Ordinal);
+            if (tokenPos != -1)
+            {
+                hr = e.ErrorMessage.Substring(tokenPos + token.Length, hrLength);
+            }
+
+            return hr;
+        }
+
+        private DispatcherTimer _timer;
+
+        private void SetupTimer()
+        {
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(timelineSlider.StepFrequency);
+            StartTimer();
+        }
+
+        private void _timer_Tick(object sender, object e)
+        {
+            if (!_sliderpressed)
+            {
+                timelineSlider.Value = mediaElement.Position.TotalSeconds;
+            }
+        }
+
+        private void StartTimer()
+        {
+            _timer.Tick += _timer_Tick;
+            _timer.Start();
+        }
+
+        private void StopTimer()
+        {
+            _timer.Stop();
+            _timer.Tick -= _timer_Tick;
+        }
+
+        private double SliderFrequency(TimeSpan timevalue)
+        {
+            double stepfrequency = -1;
+
+            double absvalue = (int)Math.Round(
+                timevalue.TotalSeconds, MidpointRounding.AwayFromZero);
+
+            stepfrequency = (int)(Math.Round(absvalue / 100));
+
+            if (timevalue.TotalMinutes >= 10 && timevalue.TotalMinutes < 30)
+            {
+                stepfrequency = 10;
+            }
+            else if (timevalue.TotalMinutes >= 30 && timevalue.TotalMinutes < 60)
+            {
+                stepfrequency = 30;
+            }
+            else if (timevalue.TotalHours >= 1)
+            {
+                stepfrequency = 60;
+            }
+
+            if (stepfrequency == 0) stepfrequency += 1;
+
+            if (stepfrequency == 1)
+            {
+                stepfrequency = absvalue / 100;
+            }
+
+            return stepfrequency;
+        }
+
+        
     }
 }
+

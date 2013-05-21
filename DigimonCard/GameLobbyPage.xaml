@@ -148,7 +148,7 @@
     -->
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.Background>
-            <ImageBrush ImageSource="Images/cube-room.jpg"/>
+            <ImageBrush ImageSource="Images/gameLobby_bkg.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -183,162 +183,86 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid
-
-        >
-
-            <Grid.ColumnDefinitions
-
-        >
-
-                <ColumnDefinition
-
-        Width="Auto"/>
-
-                <ColumnDefinition
-
-        Width="*"/>
-
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <Button
-
-        Style="{StaticResource BackButtonStyle}" x:Name="backButton" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Click="GoBack"/>
-
-            <Image
-
-        Width="100" VerticalAlignment="Top" Source="Images/mylogo.png" Margin="1124,20,0,0" Height="55" HorizontalAlignment="Left" Grid.Column="1"/>
-
-            <TextBlock
-
-        Width="155" VerticalAlignment="Top" Text="游戏大厅" TextWrapping="Wrap" Margin="10,61,0,0" Height="50" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
-
+            <Button Style="{StaticResource BackButtonStyle}" x:Name="backButton" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Click="GoBack"/>
+            <Image x:Name="mylogo" Width="100" VerticalAlignment="Top" Source="Images/mylogo.png" Margin="1124,20,0,0" Height="55" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBlock Width="155" VerticalAlignment="Top" Text="游戏大厅" TextWrapping="Wrap" Margin="10,61,0,0" Height="50" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
         </Grid>
-        <Image
-    Width="168" VerticalAlignment="Top" Visibility="Collapsed" Stretch="Fill" Source="Images/newRoomBtn.png" Grid.Row="1" PointerPressed="NewRoomBtn_pressed" PointerReleased="NewRoomBtn_released" x:Name="newRoomBtn" Margin="942,480,0,0" Height="66" HorizontalAlignment="Left"/>
-        <Image
-    Width="148" VerticalAlignment="Top" Stretch="Fill" Source="Images/quickJoinBtn.png" Grid.Row="1" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released" x:Name="QuickJoinBtn" Margin="1114,480,0,0" Height="61" HorizontalAlignment="Left"/>
-        <Button
-    VerticalAlignment="Top" Grid.Row="1" Margin="898,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="上一页" Click="previousPageBtn_click" Background="#FFFF8B00"/>
-        <Button
-    VerticalAlignment="Top" Grid.Row="1" Margin="1002,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="下一页" Click="nextPageBtn_click" Background="#FFFF8B00"/>
-        <ComboBox
-        Width="92" VerticalAlignment="Top" SelectionChanged="PageChanged" Grid.Row="1" x:Name="pageBox" Margin="772,493,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#CCFFFFFF" BorderBrush="#CC000000">
-            <ComboBoxItem
-        Content="第1页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第2页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第3页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第4页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第5页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第6页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第7页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第8页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第9页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第10页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第11页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第12页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第13页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第14页" Foreground="Black"/>
-            <ComboBoxItem
-        Content="第15页" Foreground="Black"/>
+        <Image Width="168" VerticalAlignment="Top" Visibility="Collapsed" Stretch="Fill" Source="Images/newRoomBtn.png" Grid.Row="1" PointerPressed="NewRoomBtn_pressed" PointerReleased="NewRoomBtn_released" x:Name="newRoomBtn" Margin="942,480,0,0" Height="66" HorizontalAlignment="Left"/>
+        <Image Width="148" VerticalAlignment="Top" Stretch="Fill" Source="Images/quickJoinBtn.png" Grid.Row="1" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released" x:Name="QuickJoinBtn" Margin="1114,480,0,0" Height="61" HorizontalAlignment="Left"/>
+        <Button VerticalAlignment="Top" Grid.Row="1" Margin="898,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="上一页" Click="previousPageBtn_click" Background="#FFFF8B00"/>
+        <Button VerticalAlignment="Top" Grid.Row="1" Margin="1002,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="下一页" Click="nextPageBtn_click" Background="#FFFF8B00"/>
+        <ComboBox Width="92" VerticalAlignment="Top" SelectionChanged="PageChanged" Grid.Row="1" x:Name="pageBox" Margin="772,493,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#CCFFFFFF" BorderBrush="#CC000000">
+            <ComboBoxItem Content="第1页" Foreground="Black"/>
+            <ComboBoxItem Content="第2页" Foreground="Black"/>
+            <ComboBoxItem Content="第3页" Foreground="Black"/>
+            <ComboBoxItem Content="第4页" Foreground="Black"/>
+            <ComboBoxItem Content="第5页" Foreground="Black"/>
+            <ComboBoxItem Content="第6页" Foreground="Black"/>
+            <ComboBoxItem Content="第7页" Foreground="Black"/>
+            <ComboBoxItem Content="第8页" Foreground="Black"/>
+            <ComboBoxItem Content="第9页" Foreground="Black"/>
+            <ComboBoxItem Content="第10页" Foreground="Black"/>
+            <ComboBoxItem Content="第11页" Foreground="Black"/>
+            <ComboBoxItem Content="第12页" Foreground="Black"/>
+            <ComboBoxItem Content="第13页" Foreground="Black"/>
+            <ComboBoxItem Content="第14页" Foreground="Black"/>
+            <ComboBoxItem Content="第15页" Foreground="Black"/>
         </ComboBox>
-        <Grid
-    Width="1368" VerticalAlignment="Top" Grid.RowSpan="2" Opacity="0.7" x:Name="maskPanel" Margin="-1" Height="770" HorizontalAlignment="Left" Background="Black" Visibility="Collapsed"/>
-        <Button
-    Width="92" VerticalAlignment="Top" Grid.Row="1" x:Name="chooseCardBtn" Margin="1274,400,0,0" Height="51" HorizontalAlignment="Left" Content="手牌" Click="cardsInHand_click" Visibility="Collapsed"/>
-        <Canvas
-    Width="1154" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" x:Name="roomArea" Margin="114,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="470" HorizontalAlignment="Left">
-            <MediaElement
-    Width="63" Canvas.Top="292" Source="Musics/数码宝贝OL音乐3（流畅）.mp3" Canvas.Left="-100" Height="54"/>
-            <Image
-    Width="99" Canvas.Top="-308" Source="Images/1.png" RenderTransformOrigin="0.498,0.476" x:Name="gule1" Canvas.Left="935" Height="93">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
+        <Grid Width="1368" VerticalAlignment="Top" Grid.RowSpan="2" Opacity="0.7" x:Name="maskPanel" Margin="-1" Height="770" HorizontalAlignment="Left" Background="Black" Visibility="Collapsed"/>
+        <Button Width="92" VerticalAlignment="Top" Grid.Row="1" x:Name="chooseCardBtn" Margin="1274,400,0,0" Height="51" HorizontalAlignment="Left" Content="手牌" Click="cardsInHand_click" Visibility="Collapsed"/>
+        <Canvas Width="1154" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" x:Name="roomArea" Margin="114,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="470" HorizontalAlignment="Left">
+            <MediaElement Width="63" Canvas.Top="292" Source="Musics/数码宝贝OL音乐3（流畅）.mp3" Canvas.Left="-100" Height="54"/>
+            <Image Width="99" Canvas.Top="-308" Source="Images/1.png" RenderTransformOrigin="0.498,0.476" x:Name="gule1" Canvas.Left="935" Height="93">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image Width="100" Canvas.Top="-305" Source="Images/2.png" RenderTransformOrigin="0.47,0.5" x:Name="gule5" Canvas.Left="260" Height="100">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
                 </Image.RenderTransform>
 
             </Image>
-            <Image
-    Width="100" Canvas.Top="-305" Source="Images/2.png" RenderTransformOrigin="0.47,0.5" x:Name="gule5" Canvas.Left="260" Height="100">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
+            <Image Width="89" Canvas.Top="-305" Source="Images/3.png" RenderTransformOrigin="0.5,0.5" x:Name="gule2" Canvas.Left="792" Height="90">
+                <Image.RenderTransform >
+                    <CompositeTransform/>
                 </Image.RenderTransform>
 
             </Image>
-            <Image
-    Width="89" Canvas.Top="-305" Source="Images/3.png" RenderTransformOrigin="0.5,0.5" x:Name="gule2" Canvas.Left="792" Height="90">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
+            <Image Width="100" Canvas.Top="-308" Source="Images/4.png" RenderTransformOrigin="0.5,0.5" x:Name="gule3" Canvas.Left="622" Height="100">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
                 </Image.RenderTransform>
 
             </Image>
-            <Image
-    Width="100" Canvas.Top="-308" Source="Images/4.png" RenderTransformOrigin="0.5,0.5" x:Name="gule3" Canvas.Left="622" Height="100">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
+            <Image Width="100" Canvas.Top="-305" Source="Images/5.png" RenderTransformOrigin="0.5,0.5" x:Name="gule4" Canvas.Left="443" Height="100">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
                 </Image.RenderTransform>
-
-            </Image>
-            <Image
-    Width="100" Canvas.Top="-305" Source="Images/5.png" RenderTransformOrigin="0.5,0.5" x:Name="gule4" Canvas.Left="443" Height="100">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
-                </Image.RenderTransform>
-
             </Image>
 
         </Canvas>
-        <Grid
-    Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" x:Name="chooseCardsPanel" Margin="185,-604,0,0" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
-            <Grid.RenderTransform
-    >
-                <CompositeTransform
-    />
+        <Grid Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" x:Name="chooseCardsPanel" Margin="185,-604,0,0" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
             </Grid.RenderTransform>
-            <Grid.Background
-    >
-                <ImageBrush
-    ImageSource="Images/chooseCardsPanel.png"/>
-            </Grid.Background>
-            <Image
-    Width="271" Canvas.Top="193" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5" x:Name="artWord" Canvas.Left="367" Height="169">
-                <Image.RenderTransform
-    >
-                    <CompositeTransform
-    />
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/chooseCardsPanel.png"/>
+            </Grid.Background>
+            <Image Width="271" Canvas.Top="193" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5" x:Name="artWord" Canvas.Left="367" Height="169">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
                 </Image.RenderTransform>
             </Image>
-            <Canvas
-    Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Opacity="0" x:Name="Canvas_cards" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
-                <Canvas.Clip
-    >
-                    <RectangleGeometry
-    Rect="0,0,999,569" x:Name="ClipRect"/>
-
+            <Canvas Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Opacity="0" x:Name="Canvas_cards" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
+                <Canvas.Clip>
+                    <RectangleGeometry Rect="0,0,999,569" x:Name="ClipRect"/>
                 </Canvas.Clip>
-
             </Canvas>
         </Grid>
     </Grid>

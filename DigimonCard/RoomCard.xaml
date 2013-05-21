@@ -9,8 +9,8 @@
 
     <Grid Margin="10,0,0,10" >
         <Image x:FieldModifier="public" x:Name="roomPng" HorizontalAlignment="Left" Height="296" VerticalAlignment="Top" Width="197" Source="Images/room1.png" Stretch="Fill" Margin="-5,-3,0,0" PointerPressed="BeSelect"/>
-        <TextBlock HorizontalAlignment="Left" Margin="58,37,0,241" TextWrapping="Wrap" Width="45" Foreground="White" Text="房间" FontSize="18" FontWeight="Bold" FontFamily="Arial Black" TextAlignment="Center" RenderTransformOrigin="0.479,4.016"/>
-        <TextBlock x:Name="roomNum" HorizontalAlignment="Left" Margin="108,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="31" FontSize="18" FontFamily="Arial Black" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.532,0.544"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,37,0,241" TextWrapping="Wrap" Width="81" Foreground="White" Text="第     集" FontSize="18" FontWeight="Bold" FontFamily="Arial Black" TextAlignment="Center" RenderTransformOrigin="0.479,4.016"/>
+        <TextBlock x:Name="roomNum" HorizontalAlignment="Left" Margin="82,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="31" FontSize="18" FontFamily="Arial Black" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.532,0.544"/>
 
     </Grid>
 </UserControl>
