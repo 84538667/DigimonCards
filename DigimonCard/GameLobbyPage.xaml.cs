@@ -36,6 +36,7 @@ namespace DigimonCard
         public GameLobbyPage()
         {
             this.InitializeComponent();
+            Gule.Begin();
 
             for (int i = 0 ; i < 17 ; i++)
                 for (int j = 0 ; j < 3 ; j++)
@@ -73,6 +74,7 @@ namespace DigimonCard
             storyboard_appear.Completed += storyboard_artWordBegin;
             storyboard_artWord.Completed += storyboard_artWord_completed;
             storyboard_visible.Completed += storyboard_visible_Completed;
+            Gule.Completed += storyboard_guleshou_Completed;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
         }
@@ -116,6 +118,17 @@ namespace DigimonCard
             {
                 cards[i].turn2front();
             }
+        }
+
+        private void storyboard_guleshou_Completed(object sender, object e)
+        {
+
+            gule1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule3.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule4.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule5.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            Gule.Begin();
         }
 
         private void roomCard_pressed(object sender, PointerRoutedEventArgs e)

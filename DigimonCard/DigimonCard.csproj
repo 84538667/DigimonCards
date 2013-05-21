@@ -149,6 +149,11 @@
   <ItemGroup>
     <Content Include="Assets\SplashScreen.jpg" />
     <Content Include="Assets\WideLogo.jpg" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
     <Content Include="Images\artWord.png" />
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\LightGray.png" />
@@ -159,6 +164,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Common\ReadMe.txt" />
     <Content Include="Images\attack&amp;tactic_area.png" />
+    <Content Include="Images\bogao.png" />
     <Content Include="Images\cancel.png" />
     <Content Include="Images\card.png" />
     <Content Include="Images\cardBack.png" />
@@ -170,6 +176,7 @@
     <Content Include="Images\defendBtn_click.png" />
     <Content Include="Images\gamepage_bkg.jpg" />
     <Content Include="Images\login_bkg.jpg" />
+    <Content Include="Images\mengmeng.png" />
     <Content Include="Images\mylogo.png" />
     <Content Include="Images\newRoomBtn.png" />
     <Content Include="Images\newRoomBtn_click.png" />
@@ -191,6 +198,7 @@
     <Content Include="Images\room7.png" />
     <Content Include="Images\room8.png" />
     <Content Include="Images\room9.png" />
+    <Content Include="Images\showcard.png" />
     <Content Include="Images\sunshine-twitter-background.jpg" />
     <Content Include="Images\title.png" />
     <Content Include="Images\useBtn.png" />

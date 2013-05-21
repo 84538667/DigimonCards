@@ -54,6 +54,91 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.996"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="Storyboard_gule">
+            <DoubleAnimation Duration="0" To="-158" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-86" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <PointAnimation Duration="0" To="0.535,0.538" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-44" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-156" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image1" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-10" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-164" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="8" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-166" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="12" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-168" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="Storyboard_guleshou">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="204"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="192"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="208"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:3" To="192" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:3" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:4" To="-4" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="182"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="190"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:5" To="-4" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:5" To="182" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="Gule">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="202"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="5.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-4.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-3.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="12.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule3">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="2.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule3">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule4">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="2.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule4">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="192"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="4.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="gule5">
+                <EasingPointKeyFrame KeyTime="0:0:5" Value="0.44,0.51"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule5">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="182"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="183.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule5">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="732.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
     
     <!--
@@ -73,6 +158,31 @@
         <!-- Back button and page title -->
         <Canvas x:Name="roomArea" HorizontalAlignment="Left" Height="470" VerticalAlignment="Top" Width="1154" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="114,10,0,0">
             <MediaElement Height="54" Canvas.Left="-100" Canvas.Top="292" Width="63" Source="Musics/数码宝贝OL音乐3（流畅）.mp3"/>
+            <Image x:Name="gule1" Height="93" Canvas.Left="935" Width="99" Source="Images/1.png" RenderTransformOrigin="0.498,0.476" Canvas.Top="-308">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="gule5" Height="100" Canvas.Left="260" Width="100" Source="Images/2.png" Canvas.Top="-305" RenderTransformOrigin="0.47,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="gule2" Height="90" Canvas.Left="792" Width="89" Source="Images/3.png" Canvas.Top="-305" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="gule3" Height="100" Canvas.Left="622" Width="100" Source="Images/4.png" Canvas.Top="-308" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="gule4" Height="100" Canvas.Left="443" Width="100" Source="Images/5.png" Canvas.Top="-305" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
         </Canvas>
         <Grid>
             <Grid.ColumnDefinitions>

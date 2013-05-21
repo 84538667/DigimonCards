@@ -7,26 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 	<Page.Resources>
-		<Storyboard x:Name="Storyboard">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
-				<EasingDoubleKeyFrame KeyTime="0" Value="868"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="402.348"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-6"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image">
-				<EasingDoubleKeyFrame KeyTime="0" Value="-216"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="37.006"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-			</DoubleAnimationUsingKeyFrames>
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="image">
-				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-			</DoubleAnimationUsingKeyFrames>
-		</Storyboard>
-	</Page.Resources>
+        <Storyboard x:Name="smallMove">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="smallImg">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-291"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-420"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-751.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-990"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="smallImg">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="103.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="301.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="378"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="337.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="smallImg">
+                <EasingPointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="0.513,0.5"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
 
     <Grid Opacity="0.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Images/login_bkg.jpg"/>
         </Grid.Background>
@@ -40,7 +47,7 @@
         	<Run Text="密码"/>
         	<Run Text=":"/>
         </TextBlock>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="263" Margin="345,281,0,0" VerticalAlignment="Top" Width="517" Source="Images/title.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="smallImg" HorizontalAlignment="Left" Height="72" Margin="154,-24,-311,0" VerticalAlignment="Top" Width="157" Source="Images/title.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
         	<Image.RenderTransform>
         		<CompositeTransform/>
         	</Image.RenderTransform>
@@ -50,7 +57,5 @@
         <MediaElement HorizontalAlignment="Left" Height="52" Margin="664,632,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5" Source="Musics/loggin.mp3" Volume="0.5"/>
         <PasswordBox x:Name="player_pwd" HorizontalAlignment="Left" Margin="269,502,0,0" VerticalAlignment="Top" Width="304" Height="46" RenderTransformOrigin="0.487,0.46" Background="#FF21D9E2" FontSize="22"/>
         <Button Content="ScoketIO test!!" HorizontalAlignment="Left" Margin="763,183,0,0" VerticalAlignment="Top" Width="305" Height="76" FontSize="36" Click="TEST_Click"/>
-
-
     </Grid>
 </Page>

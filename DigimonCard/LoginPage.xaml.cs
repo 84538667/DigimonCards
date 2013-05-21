@@ -39,8 +39,8 @@ namespace DigimonCard
         {
             this.InitializeComponent();
 
+            smallMove.Begin();
             ConnectedToServer();
-
         }
 
         public async void ConnectedToServer()

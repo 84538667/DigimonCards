@@ -20,11 +20,12 @@
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="storyboard_chatdisa">
-			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
-				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13.571"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="408"/>
-			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimation Duration="0:0:0.7" To="-6" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="listenTbx" d:IsOptimized="True"/>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-400"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-434"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="4"/>
+			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
 		<Storyboard x:Name="storyboard_chatappe">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="chatPanel">
@@ -81,9 +82,13 @@
             <Image x:Name="challengerReadyBtn" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="118" Source="Images/ready.png" Stretch="Fill" PointerPressed="challengerReadyBtn_pressed" Canvas.Left="889" Canvas.Top="527"/>
         </Canvas>
         <Canvas x:Name="uiAfterGameBegin" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1366" Grid.RowSpan="2" Opacity="0" Visibility="Collapsed">
-            <Image x:Name="image" Height="487" Canvas.Left="510" Canvas.Top="138" Width="628" Source="Images/attack&amp;tactic_area.png" Stretch="Fill"/>
+            <Image Height="270" Canvas.Left="82" Canvas.Top="124" Width="232" Source="Images/showcard.png" Opacity="0.8"/>
+            <Image HorizontalAlignment="Left" Height="152" VerticalAlignment="Top" Width="180" Source="Images/mengmeng.png" Canvas.Left="218" Canvas.Top="306"/>
+
+            <Image x:Name="image" Height="671" Canvas.Left="38" Canvas.Top="68" Width="1130" Source="Images/attack&amp;tactic_area.png" Stretch="Fill"/>
             <Image Height="141" Canvas.Left="570" Canvas.Top="627" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png"/>
-            <Image Height="153" Canvas.Left="570" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png" Canvas.Top="-15"/>
+            <Image Height="153" Canvas.Left="570" Width="520" Stretch="Fill" Source="Images/cardsInHand_area.png" Canvas.Top="-13"/>
+            <Image Height="100" Canvas.Left="734" Canvas.Top="370" Width="100"/>
         </Canvas>
         <Grid x:Name="chatPanel" RenderTransformOrigin="0.5,0.5" Margin="0,590,1040,-400" Grid.Row="1">
         	<Grid.RenderTransform>
@@ -96,7 +101,7 @@
         		</Grid.ColumnDefinitions>
         	</Grid>
         	<TextBox x:Name="sendTbx" HorizontalAlignment="Left" Margin="0,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="36" IsSpellCheckEnabled="True" FontSize="18" Foreground="Black" Background="{x:Null}" />
-        	<Button x:Name="sendBtn" Content="发送" HorizontalAlignment="Left" Margin="245,396,0,0" VerticalAlignment="Stretch" Width="71" FontWeight="Bold" FontSize="20"/>
+        	<Button x:Name="sendBtn" Content="发送" HorizontalAlignment="Left" Margin="245,396,0,0" VerticalAlignment="Stretch" Width="71" FontWeight="Bold" FontSize="20" Click="sendBtn_click" />
         	<TextBox x:Name="listenTbx" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="355" Width="316" Background="{x:Null}" FontSize="18" IsReadOnly="True" Margin="0,38,0,0" RenderTransformOrigin="0.5,0.5">
         		<TextBox.RenderTransform>
         			<CompositeTransform/>

@@ -233,11 +233,11 @@ namespace DigimonCard
 
         private void sendBtn_click(object sender, RoutedEventArgs e)
         {
-            if (socketIO != null && socketIO.IsConnected)
+            if (socketIO != null && socketIO.IsConnected && !this.sendTbx.Text.Equals(""))
             {
                 Debug.WriteLine("on send connect called!!!");
                 //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
-                string s = "{ \"username\":\""+Self.self.GetName()+"\",\"chat\":\"" + this.sendTbx.Text + "\"}";
+                string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
                 socketIO.Emit("client_chat", JObject.Parse(s));
 
             }
