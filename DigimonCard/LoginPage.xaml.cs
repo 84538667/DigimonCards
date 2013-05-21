@@ -32,11 +32,17 @@ namespace DigimonCard
         private String pname;
         private String ppwd;
         private String resBody = "1";
+        public int win_width = (int)Window.Current.Bounds.Width;
+        public int win_height = (int)Window.Current.Bounds.Height;
+
         public  LoginPage()
         {
             this.InitializeComponent();
 
+            smallMove.Begin();
             ConnectedToServer();
+
+            //Canvas.SetLeft(smallImg, win_width);
 
         }
 

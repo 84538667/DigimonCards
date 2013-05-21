@@ -54,6 +54,91 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.996"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="Storyboard_gule">
+            <DoubleAnimation Duration="0" To="-158" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-86" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <PointAnimation Duration="0" To="0.535,0.538" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="image" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-44" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-156" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image1" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-10" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-164" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="8" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-166" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="12" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0" To="-168" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="Storyboard_guleshou">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="204"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="192"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="208"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:3" To="192" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:3" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image2" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:4" To="-4" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image3" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="182"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="190"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:5" To="-4" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:5" To="182" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image4" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="Gule">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="202"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="5.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-4.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-3.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="12.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule3">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="2.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule3">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule4">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="2.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule4">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="192"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="4.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="gule5">
+                <EasingPointKeyFrame KeyTime="0:0:5" Value="0.44,0.51"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="gule5">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="182"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="183.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="gule5">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="732.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
     
     <!--
@@ -71,60 +156,6 @@
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Canvas x:Name="roomArea" HorizontalAlignment="Left" Height="470" VerticalAlignment="Top" Width="1154" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="114,10,0,0">
-            <MediaElement Height="54" Canvas.Left="-100" Canvas.Top="292" Width="63" Source="Musics/数码宝贝OL音乐3（流畅）.mp3"/>
-        </Canvas>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <Image Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1124,20,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" Text="游戏大厅" VerticalAlignment="Top" Height="50" Width="155" FontSize="36" FontWeight="Bold"/>
-        </Grid>
-        <Image x:Name="newRoomBtn" HorizontalAlignment="Left" Height="66" Margin="942,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Source="Images/newRoomBtn.png" PointerPressed="NewRoomBtn_pressed" PointerReleased="NewRoomBtn_released" Stretch="Fill" Visibility="Collapsed"/>
-        <Image x:Name="QuickJoinBtn" HorizontalAlignment="Left" Height="61" Margin="1114,480,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Source="Images/quickJoinBtn.png" Stretch="Fill" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released"/>
-        <Button Content="上一页" HorizontalAlignment="Left" Margin="898,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Click="previousPageBtn_click" Background="#FFFF8B00"/>
-        <Button Content="下一页" HorizontalAlignment="Left" Margin="1002,489,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Click="nextPageBtn_click" Background="#FFFF8B00"/>
-        <ComboBox x:Name="pageBox" HorizontalAlignment="Left" Margin="772,493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" FontSize="16" FontWeight="Bold" Background="#CCFFFFFF" BorderBrush="#CC000000" Foreground="Black" SelectionChanged="PageChanged">
-            <ComboBoxItem Content="第1页" Foreground="Black"/>
-            <ComboBoxItem Content="第2页" Foreground="Black"/>
-            <ComboBoxItem Content="第3页" Foreground="Black"/>
-            <ComboBoxItem Content="第4页" Foreground="Black"/>
-            <ComboBoxItem Content="第5页" Foreground="Black"/>
-            <ComboBoxItem Content="第6页" Foreground="Black"/>
-            <ComboBoxItem Content="第7页" Foreground="Black"/>
-            <ComboBoxItem Content="第8页" Foreground="Black"/>
-            <ComboBoxItem Content="第9页" Foreground="Black"/>
-            <ComboBoxItem Content="第10页" Foreground="Black"/>
-            <ComboBoxItem Content="第11页" Foreground="Black"/>
-            <ComboBoxItem Content="第12页" Foreground="Black"/>
-            <ComboBoxItem Content="第13页" Foreground="Black"/>
-            <ComboBoxItem Content="第14页" Foreground="Black"/>
-            <ComboBoxItem Content="第15页" Foreground="Black"/>
-        </ComboBox>
-
-        <Grid x:Name="maskPanel" HorizontalAlignment="Left" Height="770" Margin="-2,-2,0,0" VerticalAlignment="Top" Width="1368" Grid.RowSpan="2" Background="Black" Opacity="0.7" Visibility="Collapsed"/>
-        <Grid x:Name="chooseCardsPanel" HorizontalAlignment="Left" Height="569" Margin="185,-604,0,0" VerticalAlignment="Top" Width="999" RenderTransformOrigin="0.5,0.5" MaxWidth="999" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible">
-            <Grid.RenderTransform>
-                <CompositeTransform/>
-            </Grid.RenderTransform>
-            <Grid.Background>
-                <ImageBrush ImageSource="Images/chooseCardsPanel.png"/>
-            </Grid.Background>
-            <Image x:Name="artWord" Height="169" Canvas.Left="367" Canvas.Top="193" Width="271" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <CompositeTransform/>
-                </Image.RenderTransform>
-            </Image>
-            <Canvas x:Name="Canvas_cards" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="999" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" MaxWidth="999" Opacity="0">
-                <Canvas.Clip>
-                    <RectangleGeometry x:Name="ClipRect" Rect="0,0,999,569" />
-                </Canvas.Clip>
-            </Canvas>
-        </Grid>
-        <Button x:Name="chooseCardBtn" Content="手牌" HorizontalAlignment="Left" Margin="1274,400,0,0" VerticalAlignment="Top" Height="51" Width="92" Grid.Row="1" Click="cardsInHand_click"/>
 
         <VisualStateManager.VisualStateGroups>
 
@@ -152,5 +183,163 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+        <Grid
+
+        >
+
+            <Grid.ColumnDefinitions
+
+        >
+
+                <ColumnDefinition
+
+        Width="Auto"/>
+
+                <ColumnDefinition
+
+        Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Button
+
+        Style="{StaticResource BackButtonStyle}" x:Name="backButton" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Click="GoBack"/>
+
+            <Image
+
+        Width="100" VerticalAlignment="Top" Source="Images/mylogo.png" Margin="1124,20,0,0" Height="55" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <TextBlock
+
+        Width="155" VerticalAlignment="Top" Text="游戏大厅" TextWrapping="Wrap" Margin="10,61,0,0" Height="50" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
+
+        </Grid>
+        <Image
+    Width="168" VerticalAlignment="Top" Visibility="Collapsed" Stretch="Fill" Source="Images/newRoomBtn.png" Grid.Row="1" PointerPressed="NewRoomBtn_pressed" PointerReleased="NewRoomBtn_released" x:Name="newRoomBtn" Margin="942,480,0,0" Height="66" HorizontalAlignment="Left"/>
+        <Image
+    Width="148" VerticalAlignment="Top" Stretch="Fill" Source="Images/quickJoinBtn.png" Grid.Row="1" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released" x:Name="QuickJoinBtn" Margin="1114,480,0,0" Height="61" HorizontalAlignment="Left"/>
+        <Button
+    VerticalAlignment="Top" Grid.Row="1" Margin="898,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="上一页" Click="previousPageBtn_click" Background="#FFFF8B00"/>
+        <Button
+    VerticalAlignment="Top" Grid.Row="1" Margin="1002,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="下一页" Click="nextPageBtn_click" Background="#FFFF8B00"/>
+        <ComboBox
+        Width="92" VerticalAlignment="Top" SelectionChanged="PageChanged" Grid.Row="1" x:Name="pageBox" Margin="772,493,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#CCFFFFFF" BorderBrush="#CC000000">
+            <ComboBoxItem
+        Content="第1页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第2页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第3页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第4页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第5页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第6页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第7页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第8页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第9页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第10页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第11页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第12页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第13页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第14页" Foreground="Black"/>
+            <ComboBoxItem
+        Content="第15页" Foreground="Black"/>
+        </ComboBox>
+        <Grid
+    Width="1368" VerticalAlignment="Top" Grid.RowSpan="2" Opacity="0.7" x:Name="maskPanel" Margin="-1" Height="770" HorizontalAlignment="Left" Background="Black" Visibility="Collapsed"/>
+        <Button
+    Width="92" VerticalAlignment="Top" Grid.Row="1" x:Name="chooseCardBtn" Margin="1274,400,0,0" Height="51" HorizontalAlignment="Left" Content="手牌" Click="cardsInHand_click" Visibility="Collapsed"/>
+        <Canvas
+    Width="1154" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" x:Name="roomArea" Margin="114,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="470" HorizontalAlignment="Left">
+            <MediaElement
+    Width="63" Canvas.Top="292" Source="Musics/数码宝贝OL音乐3（流畅）.mp3" Canvas.Left="-100" Height="54"/>
+            <Image
+    Width="99" Canvas.Top="-308" Source="Images/1.png" RenderTransformOrigin="0.498,0.476" x:Name="gule1" Canvas.Left="935" Height="93">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+
+            </Image>
+            <Image
+    Width="100" Canvas.Top="-305" Source="Images/2.png" RenderTransformOrigin="0.47,0.5" x:Name="gule5" Canvas.Left="260" Height="100">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+
+            </Image>
+            <Image
+    Width="89" Canvas.Top="-305" Source="Images/3.png" RenderTransformOrigin="0.5,0.5" x:Name="gule2" Canvas.Left="792" Height="90">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+
+            </Image>
+            <Image
+    Width="100" Canvas.Top="-308" Source="Images/4.png" RenderTransformOrigin="0.5,0.5" x:Name="gule3" Canvas.Left="622" Height="100">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+
+            </Image>
+            <Image
+    Width="100" Canvas.Top="-305" Source="Images/5.png" RenderTransformOrigin="0.5,0.5" x:Name="gule4" Canvas.Left="443" Height="100">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+
+            </Image>
+
+        </Canvas>
+        <Grid
+    Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" x:Name="chooseCardsPanel" Margin="185,-604,0,0" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
+            <Grid.RenderTransform
+    >
+                <CompositeTransform
+    />
+            </Grid.RenderTransform>
+            <Grid.Background
+    >
+                <ImageBrush
+    ImageSource="Images/chooseCardsPanel.png"/>
+            </Grid.Background>
+            <Image
+    Width="271" Canvas.Top="193" Source="Images/artWord.png" RenderTransformOrigin="0.5,0.5" x:Name="artWord" Canvas.Left="367" Height="169">
+                <Image.RenderTransform
+    >
+                    <CompositeTransform
+    />
+                </Image.RenderTransform>
+            </Image>
+            <Canvas
+    Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Opacity="0" x:Name="Canvas_cards" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="569" HorizontalAlignment="Left">
+                <Canvas.Clip
+    >
+                    <RectangleGeometry
+    Rect="0,0,999,569" x:Name="ClipRect"/>
+
+                </Canvas.Clip>
+
+            </Canvas>
+        </Grid>
     </Grid>
 </common:LayoutAwarePage>

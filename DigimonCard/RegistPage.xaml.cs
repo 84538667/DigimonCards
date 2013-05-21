@@ -48,7 +48,7 @@ namespace DigimonCard
             String nname = this.regist_name.Text;
             String npwd = this.regist_pwd.Password;
             String cpwd = this.confirm_pwd.Password;
-            String chinese = "^[A-Za-z_0-9]+$";
+            String chinese = "^[A-Za-z_0-9\u4e00-\u9fa5]+$";
             if (nname.Equals("") || npwd.Equals(""))
             {
                 MessageDialog md = new MessageDialog("请输入用户名/密码哦~亲~", "错误");

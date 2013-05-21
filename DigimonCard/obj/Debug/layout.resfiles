@@ -12,8 +12,8 @@ AttractCards.xaml
 Cards.xaml
 Common\StandardStyles.xaml
 GameLobbyPage.xaml
-GamePage.xaml
 LoginPage.xaml
+MediaPlayPage.xaml
 RegistPage.xaml
 RoomCard.xaml
 TestSocketIO.xaml

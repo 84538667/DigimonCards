@@ -29,6 +29,8 @@ namespace DigimonCard
         public bool isChooseCardsbegin = false;
         public static Uri baseUri = new Uri("ms-appx:///");
         public int currentPageNum = 1;
+        public int win_width = (int)Window.Current.Bounds.Width;
+        public int win_height = (int)Window.Current.Bounds.Height;
 
         private int currentPageTotalRoomNum = 8;
         private int totalPage = 15;
@@ -36,6 +38,10 @@ namespace DigimonCard
         public GameLobbyPage()
         {
             this.InitializeComponent();
+            
+            Gule.Begin();
+            maskPanel.Width = win_width;
+            maskPanel.Height = win_height;
 
             Self.roomNum = 0;
 
@@ -77,6 +83,7 @@ namespace DigimonCard
             storyboard_appear.Completed += storyboard_artWordBegin;
             storyboard_artWord.Completed += storyboard_artWord_completed;
             storyboard_visible.Completed += storyboard_visible_Completed;
+            Gule.Completed += storyboard_guleshou_Completed;
 
             this.pageBox.SelectedIndex = currentPageNum - 1;
         }
@@ -122,6 +129,17 @@ namespace DigimonCard
             }
         }
 
+        private void storyboard_guleshou_Completed(object sender, object e)
+        {
+
+            gule1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule3.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule4.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            gule5.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            Gule.Begin();
+        }
+
         private void roomCard_Entered(object sender, PointerRoutedEventArgs e)
         {
             for (int i = (currentPageNum - 1) * currentPageTotalRoomNum; i < (currentPageNum - 1) * currentPageTotalRoomNum + currentPageTotalRoomNum; i++)
@@ -148,11 +166,12 @@ namespace DigimonCard
                     BitmapImage bitmapImage = new BitmapImage();
                     bitmapImage.UriSource = new Uri("ms-appx:///Images/QuickJoinBtn.png");
                     QuickJoinBtn.Source = bitmapImage;
-                    Self.roomNum = i;
-                    this.Frame.Navigate(typeof(GamePage));
+                    Self.roomNum = i+1;
+                    this.Frame.Navigate(typeof(MediaPlayPage));
                 }
         }
 
+        //新建房间测试内容，现在还没有用
         private void NewRoomBtn_pressed(object sender, PointerRoutedEventArgs e)
         {
             BitmapImage bitmapImage = new BitmapImage();
@@ -166,11 +185,11 @@ namespace DigimonCard
             bitmapImage.UriSource = new Uri("ms-appx:///Images/newRoomBtn.png");
             newRoomBtn.Source = bitmapImage;
 
-            //新建房间测试内容，现在还没有用
-            //Canvas.SetLeft(roomCard[0], 50);
-            //Canvas.SetTop(roomCard[0], 50);
-            //roomArea.Children.Add(roomCard[0]);
-        }
+               //新建房间测试内容，现在还没有用
+               // Canvas.SetLeft(roomCard[0], 50);
+               //Canvas.SetTop(roomCard[0], 50);
+               // roomArea.Children.Add(roomCard[0]);
+        }//
 
         private void QuickJoinBtn_pressed(object sender, PointerRoutedEventArgs e)
         {
@@ -186,7 +205,7 @@ namespace DigimonCard
             bitmapImage.UriSource = new Uri("ms-appx:///Images/QuickJoinBtn.png");
             QuickJoinBtn.Source = bitmapImage;
 
-            this.Frame.Navigate(typeof(GamePage));
+            this.Frame.Navigate(typeof(MediaPlayPage));
         }
 
         private void previousPageBtn_click(object sender, RoutedEventArgs e)

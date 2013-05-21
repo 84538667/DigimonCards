@@ -6,7 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+    	<Storyboard x:Name="smallMove">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="smallImg">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="358.212"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="319.406"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="smallImg">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-655.225"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-855.224"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard>
+    </Page.Resources>
+    
     <Grid Opacity="0.8">
         <Grid.Background>
             <ImageBrush ImageSource="Images/login_bkg.jpg"/>
@@ -21,12 +35,18 @@
         	<Run Text="密码"/>
         	<Run Text=":"/>
         </TextBlock>
-        <Image HorizontalAlignment="Left" Height="267" Margin="363,285,0,0" VerticalAlignment="Top" Width="677" Source="Images/title.png"/>
         <Button x:Name="player_regist" Content="没有注册的亲们，请猛戳这里！！&#xD;&#xA;" HorizontalAlignment="Left" Margin="126,632,0,0" VerticalAlignment="Top" Width="467" FontSize="20" Height="52" Click="player_regist_Click"/>
-        <Button x:Name="login_button" Content="登陆" HorizontalAlignment="Left" Margin="664,430,0,0" VerticalAlignment="Top" Width="148" Height="76" FontSize="36" Click="Button_Click"/>
+        <Button x:Name="login_button" Content="点此登录" HorizontalAlignment="Left" Margin="664,430,0,0" VerticalAlignment="Top" Width="191" Height="76" FontSize="36" Click="Button_Click"/>
         <MediaElement HorizontalAlignment="Left" Height="52" Margin="664,632,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5" Source="Musics/loggin.mp3" Volume="0.5"/>
-        <PasswordBox x:Name="player_pwd" HorizontalAlignment="Left" Margin="269,502,0,0" VerticalAlignment="Top" Width="304" Height="46" RenderTransformOrigin="0.487,0.46" Background="#FF21D9E2"/>
-        <Button Content="ScoketIO test!!" HorizontalAlignment="Left" Margin="763,183,0,0" VerticalAlignment="Top" Width="305" Height="76" FontSize="36" Click="TEST_Click"/>
+        <PasswordBox x:Name="player_pwd" HorizontalAlignment="Left" Margin="269,502,0,0" VerticalAlignment="Top" Width="304" Height="46" RenderTransformOrigin="0.487,0.46" Background="#FF21D9E2" FontSize="22"/>
+        <Button Content="ScoketIO test!!" HorizontalAlignment="Left" Margin="763,183,0,0" VerticalAlignment="Top" Width="305" Height="76" FontSize="36" Click="TEST_Click" Visibility="Collapsed"/>
+        <Canvas HorizontalAlignment="Left" Height="770" Margin="0,-2,0,0" VerticalAlignment="Top" Width="1366">
+            <Image x:Name="smallImg" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="157" Source="Images/title.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1371" Canvas.Top="-2">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
 
 
     </Grid>
