@@ -76,9 +76,23 @@ namespace DigimonCard
             Frame.Navigate(typeof(RegistPage));
         }
 
+        public bool IsConnected()
+        {
+            int connectionDescription = 0;
+            //判断是否连接到外网上的函数，并返回布尔值
+            return true; 
+                //InternetGetConnectedState(out connectionDescription, 0);
+        }
+
         //登陆Button点击事件
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(!IsConnected()){
+                MessageDialog md = new MessageDialog("未连接网络，请重试", "错误");
+                await md.ShowAsync();
+                return;
+            }
+
             //禁止多次点击，要不李昱东同学那受不了。。
             this.login_button.IsEnabled = false;
 
@@ -164,6 +178,8 @@ namespace DigimonCard
         {
             Frame.Navigate(typeof(TestSocketIO));
         }
+
+        
     }
 
 }

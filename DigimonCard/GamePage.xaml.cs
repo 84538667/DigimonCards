@@ -21,6 +21,7 @@ using Windows.Web;
 using SocketIOClient;
 using Windows.UI.Core;
 using Newtonsoft.Json;
+using Windows.System;
 
 // “基本页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234237 上有介绍
 
@@ -80,7 +81,7 @@ namespace DigimonCard
                     JObject oc = (JObject)ob["mes"];
 
                     if (oc["chat"] != null)
-                    ChangedEventHandler(oc["chat"].ToString());
+                        ChangedEventHandler(oc["username"]+":"+oc["chat"].ToString());
                 });
             });
 
@@ -236,7 +237,7 @@ namespace DigimonCard
             {
                 Debug.WriteLine("on send connect called!!!");
                 //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
-                string s = "{\"chat\":\"" + this.sendTbx.Text + "\"}";
+                string s = "{ \"username\":\""+Self.self.GetName()+"\",\"chat\":\"" + this.sendTbx.Text + "\"}";
                 socketIO.Emit("client_chat", JObject.Parse(s));
 
             }
@@ -260,6 +261,23 @@ namespace DigimonCard
                 storyboard_chatdisa.Begin();
                 pop_fold_Btn.Content = "弹出聊天框";
             }
+        }
+
+        private void keyboard_Click(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+
+                if (socketIO != null && socketIO.IsConnected && !this.sendTbx.Text.Equals(""))
+                {
+                    Debug.WriteLine("on send connect called!!!");
+                    //socketIO.Emit("hConnect", JObject.Parse(sendTbx.Text));
+                    string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"chat\":\"" + this.sendTbx.Text + "\"}";
+                    socketIO.Emit("client_chat", JObject.Parse(s));
+
+                }
+            }
+
         }
 
     }
