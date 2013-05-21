@@ -1,2 +1,0 @@
-F:\Users\王永淳\Desktop\DigimonCards_new\DigimonCard\DigimonCard.csproj;neutral
-F:\Users\王永淳\Desktop\DigimonCards_new\SocketIO4Net\SocketIO4Net.csproj;neutral

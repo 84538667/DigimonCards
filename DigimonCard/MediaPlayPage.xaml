@@ -69,7 +69,7 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+                <Button x:Name="backButton" Click="back" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
                 <Image x:Name="mylogo" Grid.Column="1" HorizontalAlignment="Left" Height="55" Margin="1124,20,0,0" VerticalAlignment="Top" Width="100" Source="Images/mylogo.png"/>
                 <TextBlock x:Name="roomNum" Grid.Column="1" HorizontalAlignment="Left" Margin="86,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="61" FontSize="36" FontWeight="Bold"/>
                 <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="110,142,0,-38" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="319" FontSize="24" FontWeight="Bold">

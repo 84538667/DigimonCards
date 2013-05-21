@@ -67,27 +67,50 @@ namespace DigimonCard
             {
                 Debug.WriteLine("on connect called!!!");
                 JObject jo = new JObject();
-                jo["username"] = "wycsb";
+                jo["username"] = Self.self.GetName();
                 socketIO.Emit("join", jo);
             });
 
 
             socketIO.On("chat", async (message) =>
             {
-                Debug.WriteLine("start listening");
+                Debug.WriteLine("chat string");
                 Debug.WriteLine(message.Json.ToJsonString());
                 await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
                     JObject o = (JObject)JsonConvert.DeserializeObject(message.Json.ToJsonString());
                     JArray jb = (JArray)JsonConvert.DeserializeObject(o["args"].ToString());
                     JObject ob = (JObject)jb[0];
-
                     if (ob["roomNum"].ToString().Equals(Self.roomNum.ToString()))
                         ChangedEventHandler(ob["username"] + ":" + ob["chat"]);
                 });
             });
 
+            socketIO.On("num", async (message) =>
+            {
+                Debug.WriteLine("num changed");
+                Debug.WriteLine(message.Json.ToJsonString());
+                await SampleDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+
+                    Debug.WriteLine(message.Json.ToJsonString());
+                    JObject o = (JObject)JsonConvert.DeserializeObject(message.Json.ToJsonString());
+                    JArray jb = (JArray)JsonConvert.DeserializeObject(o["args"].ToString());
+                    JObject ob = (JObject)jb[0];
+                    if (ob["roomNum"].ToString().Equals(Self.roomNum.ToString()))
+                        ChangedNumHandler(ob["counts"].ToString());
+                });
+            });
+
             socketIO.ConnectAsync();
+
+            string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"roomNum\":\"" + Self.roomNum.ToString()  + "\"}";
+            socketIO.Emit("enter_room", JObject.Parse(s));
+        }
+
+        private void ChangedNumHandler(string p)
+        {
+            this.onlinePersonNum.Text = p;
         }
         /// <summary>
         /// 使用在导航过程中传递的内容填充页。在从以前的会话
@@ -182,8 +205,21 @@ namespace DigimonCard
 
                 }
             }
-
         }
 
+        private void back(object sender, RoutedEventArgs e)
+        {
+            string s = "{ \"username\":\"" + Self.self.GetName() + "\",\"roomNum\":\"" + Self.roomNum.ToString() + "\"}";
+            socketIO.Emit("exit_room", JObject.Parse(s));
+            if (socketIO != null)
+            {
+                JObject jo = new JObject();
+                jo["username"] = "username";
+                socketIO.Emit("client_close", jo);
+
+                socketIO.Close();
+            }
+            Frame.Navigate(typeof(GameLobbyPage));
+        }
     }
 }
