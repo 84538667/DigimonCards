@@ -40,6 +40,7 @@ namespace DigimonCard
         private Client socketIO;
         public bool isChooseCardsbegin = false;
         private bool _isFullscreenToggle = false;
+        private bool _sliderpressed = false;
         private Size _previousVideoContainerSize = new Size();
         private CoreDispatcher SampleDispatcher;
         public int win_width = (int)Window.Current.Bounds.Width;
@@ -51,6 +52,11 @@ namespace DigimonCard
 
             maskPanel.Width = win_width;
             maskPanel.Height = win_height;
+            //videoContainer.Width = win_width - 500;
+            //videoContainer.Height = 2 * (win_width - 500) / 3;
+            //mediaElement.Width = win_width - 500;
+            //mediaElement.Height = 2 * (win_width - 500) / 3;
+
             Canvas.SetLeft(mediaPlayPanel, win_width / 2 - 500);
             Canvas.SetLeft(mylogo, win_width - 110);
             Canvas.SetLeft(panelPopBtn, win_width - 92);
@@ -58,6 +64,7 @@ namespace DigimonCard
             Canvas.SetLeft(esc_fullscreen, win_width - 75);
             roomNum.Text = Self.roomNum.ToString();
             vedioNum.Text = Self.roomNum.ToString();
+            volumeSlider.Value = 100;
 
             SampleDispatcher = Window.Current.CoreWindow.Dispatcher; //此实例是负责处理窗口消息，事件调度给客户端。
 
@@ -275,6 +282,7 @@ namespace DigimonCard
                 storyboard_appear.Begin();
                 isChooseCardsbegin = true;
                 panelPopBtn.Content = "完成";
+                storyboard_pan.Begin();
             }
             else
             {
@@ -312,10 +320,10 @@ namespace DigimonCard
                 _previousVideoContainerSize.Width = videoContainer.ActualWidth;
                 _previousVideoContainerSize.Height = videoContainer.ActualHeight;
 
-                videoContainer.Width = Window.Current.Bounds.Width;
-                videoContainer.Height = Window.Current.Bounds.Height;
-                mediaElement.Width = Window.Current.Bounds.Width;
-                mediaElement.Height = Window.Current.Bounds.Height;
+                videoContainer.Width = win_width ;
+                videoContainer.Height = win_height;
+                mediaElement.Width = win_width;
+                mediaElement.Height = win_height;
 
                 esc_fullscreen.Visibility = Windows.UI.Xaml.Visibility.Visible;
             }
@@ -361,34 +369,21 @@ namespace DigimonCard
             mediaElement.Stop();
         }
 
-        private void btnVolumeDown_Click(object sender, RoutedEventArgs e)
-        {
-            if (mediaElement.IsMuted)
-            {
-                mediaElement.IsMuted = false;
-            }
-
-            if (mediaElement.Volume < 1)
-            {
-                mediaElement.Volume += .1;
-            }
-        }
-
-        private void btnMute_Click(object sender, RoutedEventArgs e)
+        private void btnMute_Click(object sender, PointerRoutedEventArgs e)
         {
             mediaElement.IsMuted = !mediaElement.IsMuted;
-        }
 
-        private void btnVolumeUp_Click(object sender, RoutedEventArgs e)
-        {
             if (mediaElement.IsMuted)
             {
-                mediaElement.IsMuted = false;
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/mute.png");
+                btnMute.Source = bitmapImage;
             }
-
-            if (mediaElement.Volume > 0)
+            else
             {
-                mediaElement.Volume -= .1;
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/sound_large.png");
+                btnMute.Source = bitmapImage;
             }
         }
 
@@ -416,8 +411,6 @@ namespace DigimonCard
 
             SetupTimer();
         }
-
-        private bool _sliderpressed = false;
 
         void slider_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
@@ -554,7 +547,35 @@ namespace DigimonCard
             return stepfrequency;
         }
 
-        
+        private async void findDocuments(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker picker = new FileOpenPicker();
+            picker.SuggestedStartLocation = PickerLocationId.VideosLibrary;
+
+            picker.FileTypeFilter.Add(".wmv");
+            picker.FileTypeFilter.Add(".mp4");
+            picker.FileTypeFilter.Add(".mp3");
+            picker.FileTypeFilter.Add(".rmvb");
+            picker.FileTypeFilter.Add(".avi");
+            picker.FileTypeFilter.Add(".wma");
+            picker.FileTypeFilter.Add(".png");
+
+            var file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                var stream = await file.OpenAsync(FileAccessMode.Read);
+                // 指定需要让 MediaElement 播放的媒体流
+                mediaElement.SetSource(stream, file.ContentType);
+            }
+        }
+
+        private void volumeChanged_draged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            double d = (double)(((double)volumeSlider.Value) / 100);
+            mediaElement.Volume = d;
+            volumeText.Text = (double.Parse(d.ToString("F2")) * 100) + "";
+        }
+
     }
 }
 

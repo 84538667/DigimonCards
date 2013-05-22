@@ -48,6 +48,18 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.996"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="storyboard_pan">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="216"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="456"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="786"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="image">
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="90"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="180"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:3" Value="360"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </common:LayoutAwarePage.Resources>
 
     <!--
@@ -99,6 +111,69 @@
                 <TextBlock x:Name="onlinePersonNum" TextWrapping="Wrap" FontSize="24" FontWeight="Bold" Grid.Column="1" Margin="590,142,599,-29"/>
             </Grid>
             <Grid Width="1368" VerticalAlignment="Top" Opacity="0.7" x:Name="maskPanel" Height="770" HorizontalAlignment="Left" Background="Black" Visibility="Collapsed" Canvas.Left="-1" Canvas.Top="-1"/>
+            <Button Width="92" VerticalAlignment="Top" x:Name="panelPopBtn" Height="51" HorizontalAlignment="Left" Content="播放" Click="cardsInHand_click" Canvas.Left="1274" Canvas.Top="400"/>
+            <Grid Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" x:Name="mediaPlayPanel" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="666" HorizontalAlignment="Left" Canvas.Left="301" Canvas.Top="-678">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/screen.png"/>
+                </Grid.Background>
+                <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="80,123,75,57" Width="844" Height="486">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <ContentControl x:Name="videoContainer" 
+            			HorizontalContentAlignment="Center" 
+            			VerticalContentAlignment="Center" Grid.Row="0" Margin="42,0,40,94" Grid.RowSpan="2" >
+                        <MediaElement x:Name="mediaElement"
+            				MediaOpened="videoElement_MediaOpened" 
+            				MediaEnded="videoMediaElement_MediaEnded" 
+            				MediaFailed="videoMediaElement_MediaFailed"
+            				CurrentStateChanged="videoMediaElement_CurrentStateChanged"
+            				PosterSource="Media/Video1_Poster.png"
+            				AutoPlay="False" />
+                    </ContentControl>
+                    <!-- Transport Controls -->
+                    <StackPanel x:Name="TransportControlsPanel" 
+            			HorizontalAlignment="Center" 
+            			Grid.Row="1" Width="716" Height="100" >
+                        <Slider x:Name="timelineSlider" Margin="10,0" Width="696" Height="42" ValueChanged="timelineSlider_ValueChanged" PointerEntered="slider_PointerEntered" PointerCaptureLost="slider_PointerCaptureLost"/>
+                        <StackPanel Orientation="Horizontal" Width="475" Height="51">
+                            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" Width="46" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/play.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnPause" Click="btnPause_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" Width="48" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/pause.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnStop" Click="btnStop_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="48" Height="47" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/stop.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Image x:Name="btnMute" Width="45" Source="Images/sound_middle.png" Margin="0,4,0,6" Height="40" PointerPressed="btnMute_Click"/>
+                            <Slider x:Name="volumeSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Margin="0,2,0,-2" LargeChange="0" ValueChanged="volumeChanged_draged" />
+                            <TextBlock x:Name="volumeText" TextWrapping="Wrap" Width="41" Margin="0,14,0,6" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+                            <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" Width="52" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="findDocuments" Margin="0,2,0,0">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/find.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnFullScreenToggle" Click="btnFullScreenToggle_Click"  Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="51" Height="48" Margin="0,0,0,2" VerticalAlignment="Bottom" >
+                                <Button.Background>
+                                    <ImageBrush ImageSource="Images/fullscreen.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
             <Grid x:Name="chatPanel" RenderTransformOrigin="0.5,0.5" Height="438" Canvas.Left="2" Canvas.Top="327" Width="326">
                 <Grid.RenderTransform>
                     <CompositeTransform/>
@@ -117,86 +192,18 @@
                     </TextBox.RenderTransform>
                 </TextBox>
                 <Button x:Name="pop_fold_Btn" Content="收起聊天框" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Height="43" Width="162" Click="pop_fold_Btn_Click"/>
+                <Image Margin="151,-53,75,391" Source="Images/mengmeng.png"/>
             </Grid>
-            <Grid Width="999" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5" x:Name="mediaPlayPanel" MaxWidth="999" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="662" HorizontalAlignment="Left" Canvas.Left="185" Canvas.Top="-678">
-                <Grid.RenderTransform>
-                    <CompositeTransform/>
-                </Grid.RenderTransform>
-                <Grid.Background>
-                    <ImageBrush ImageSource="Images/screen.png"/>
-                </Grid.Background>
-                <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="80,123,75,57">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
-
-                    <ContentControl x:Name="videoContainer" 
-                            HorizontalContentAlignment="Center" 
-                            VerticalContentAlignment="Center" 
-                            Height="400" Grid.Row="0" >
-                        <MediaElement Name="mediaElement"
-                              MediaOpened="videoElement_MediaOpened" 
-                              MediaEnded="videoMediaElement_MediaEnded" 
-                              MediaFailed="videoMediaElement_MediaFailed"
-                              CurrentStateChanged="videoMediaElement_CurrentStateChanged"
-                              PosterSource="Media/Video1_Poster.png"
-                              AutoPlay="False" />
-                    </ContentControl>
-                    <!-- Transport Controls -->
-                    <StackPanel Name="TransportControlsPanel" 
-                    HorizontalAlignment="Center" 
-                    Grid.Row="1" >
-                        <Slider Name="timelineSlider" Margin="10,0" Width="696" Height="42"/>
-                        <StackPanel Orientation="Horizontal" Width="412" Height="46">
-                            <Button x:Name="btnPlay" Click="btnPlay_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" Width="46" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/play.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnPause" Click="btnPause_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" Width="48" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/pause.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnStop" Click="btnStop_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="48" Height="47" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/stop.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnMute" Click="btnMute_Click"  Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="50" Height="47" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/mute.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnFullScreenToggle" Click="btnFullScreenToggle_Click"  Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="51" Height="47" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/fullscreen.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnVolumeUp" Click="btnVolumeUp_Click" Content="" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" Margin="0,0,0,-1" Width="49" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/sound_small.png"/>
-                                </Button.Background>
-                            </Button>
-                            <Button x:Name="btnVolumeDown" Click="btnVolumeDown_Click" Content="" Margin="0,0,0,-1" Width="48" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47" >
-                                <Button.Background>
-                                    <ImageBrush ImageSource="Images/sound_large.png"/>
-                                </Button.Background>
-                            </Button>
-                            <TextBlock x:Name="txtVolume" FontSize="14"
-                        		Text="{Binding Volume, ElementName=videoMediaElement}" 
-                        		VerticalAlignment="Center" HorizontalAlignment="Right"  Margin="0,10" Height="26" Width="32"  />
-                        </StackPanel>
-                    </StackPanel>
-                </Grid>
-            </Grid>
-            <Button Width="92" VerticalAlignment="Top" x:Name="panelPopBtn" Height="51" HorizontalAlignment="Left" Content="播放" Click="cardsInHand_click" Canvas.Left="1274" Canvas.Top="400"/>
             <Button x:Name="esc_fullscreen" Content="" Canvas.Left="1299" Canvas.Top="10" Height="54" Width="57" BorderBrush="{x:Null}" Foreground="{x:Null}" Visibility="Collapsed" Click="esc_fullscreen_click">
                 <Button.Background>
                     <ImageBrush ImageSource="Images/esc_fullscreen.png"/>
                 </Button.Background>
             </Button>
+            <Image x:Name="image" Height="232" Canvas.Left="582" Canvas.Top="429" Width="285" Source="Images/pan.png" Stretch="Fill" RenderTransformOrigin="0.518,0.479">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
         </Canvas>
     </Grid>
 </common:LayoutAwarePage>

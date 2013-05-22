@@ -189,11 +189,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Style="{StaticResource BackButtonStyle}" x:Name="backButton" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Click="GoBack"/>
-            <Image x:Name="mylogo" Width="100" VerticalAlignment="Top" Source="Images/mylogo.png" Margin="1124,20,0,0" Height="55" HorizontalAlignment="Left" Grid.Column="1"/>
-            <TextBlock Width="155" VerticalAlignment="Top" Text="游戏大厅" TextWrapping="Wrap" Margin="10,61,0,0" Height="50" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
+            <TextBlock Width="155" VerticalAlignment="Top" Text="播放列表" TextWrapping="Wrap" Margin="10,61,0,0" Height="50" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
         </Grid>
         <Image Width="168" VerticalAlignment="Top" Visibility="Collapsed" Stretch="Fill" Source="Images/newRoomBtn.png" Grid.Row="1" PointerPressed="NewRoomBtn_pressed" PointerReleased="NewRoomBtn_released" x:Name="newRoomBtn" Margin="942,480,0,0" Height="66" HorizontalAlignment="Left"/>
-        <Image Width="148" VerticalAlignment="Top" Stretch="Fill" Source="Images/quickJoinBtn.png" Grid.Row="1" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released" x:Name="QuickJoinBtn" Margin="1114,480,0,0" Height="61" HorizontalAlignment="Left"/>
+        <Image Width="148" VerticalAlignment="Top" Stretch="Fill" Source="Images/quickJoinBtn.png" Grid.Row="1" PointerPressed="QuickJoinBtn_pressed" PointerReleased="QuickJoinBtn_released" x:Name="QuickJoinBtn" Margin="1114,480,0,0" Height="61" HorizontalAlignment="Left" Visibility="Collapsed"/>
         <Button VerticalAlignment="Top" Grid.Row="1" Margin="898,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="上一页" Click="previousPageBtn_click" Background="#FFFF8B00"/>
         <Button VerticalAlignment="Top" Grid.Row="1" Margin="1002,489,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Content="下一页" Click="nextPageBtn_click" Background="#FFFF8B00"/>
         <ComboBox Width="92" VerticalAlignment="Top" SelectionChanged="PageChanged" Grid.Row="1" x:Name="pageBox" Margin="772,493,0,0" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Foreground="Black" Background="#CCFFFFFF" BorderBrush="#CC000000">
@@ -207,16 +206,11 @@
             <ComboBoxItem Content="第8页" Foreground="Black"/>
             <ComboBoxItem Content="第9页" Foreground="Black"/>
             <ComboBoxItem Content="第10页" Foreground="Black"/>
-            <ComboBoxItem Content="第11页" Foreground="Black"/>
-            <ComboBoxItem Content="第12页" Foreground="Black"/>
-            <ComboBoxItem Content="第13页" Foreground="Black"/>
-            <ComboBoxItem Content="第14页" Foreground="Black"/>
-            <ComboBoxItem Content="第15页" Foreground="Black"/>
         </ComboBox>
         <Grid Width="1368" VerticalAlignment="Top" Grid.RowSpan="2" Opacity="0.7" x:Name="maskPanel" Margin="-1" Height="770" HorizontalAlignment="Left" Background="Black" Visibility="Collapsed"/>
         <Button Width="92" VerticalAlignment="Top" Grid.Row="1" x:Name="chooseCardBtn" Margin="1274,400,0,0" Height="51" HorizontalAlignment="Left" Content="手牌" Click="cardsInHand_click" Visibility="Collapsed"/>
         <Canvas Width="1154" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="1" x:Name="roomArea" Margin="114,10,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="470" HorizontalAlignment="Left">
-            <MediaElement Width="63" Canvas.Top="292" Source="Musics/数码宝贝OL音乐3（流畅）.mp3" Canvas.Left="-100" Height="54"/>
+            <MediaElement x:Name="mediaElement" Width="63" Canvas.Top="292" Source="Musics/数码宝贝OL音乐3（流畅）.mp3" Canvas.Left="-100" Height="54"/>
             <Image Width="99" Canvas.Top="-308" Source="Images/1.png" RenderTransformOrigin="0.498,0.476" x:Name="gule1" Canvas.Left="935" Height="93">
                 <Image.RenderTransform>
                     <CompositeTransform/>
@@ -265,5 +259,11 @@
                 </Canvas.Clip>
             </Canvas>
         </Grid>
+        <Canvas Margin="-1,2,0,-1" Grid.RowSpan="2">
+            <Image x:Name="mylogo" Width="100" VerticalAlignment="Top" Source="Images/mylogo.png" Height="55" HorizontalAlignment="Left" Canvas.Left="1244" Canvas.Top="20"/>
+            <TextBlock Canvas.Left="943" TextWrapping="Wrap" Text="欢迎你" Canvas.Top="27" Height="30" Width="82" FontWeight="Bold" FontSize="24"/>
+            <TextBlock x:Name="userName" Canvas.Left="1035" TextWrapping="Wrap" Canvas.Top="27" FontSize="24" FontStyle="Italic"/>
+            <Image x:Name="btnMute" Height="47" Canvas.Left="10" Canvas.Top="710" Width="50" Source="Images/sound_middle.png" PointerPressed="isMute"/>
+        </Canvas>
     </Grid>
 </common:LayoutAwarePage>

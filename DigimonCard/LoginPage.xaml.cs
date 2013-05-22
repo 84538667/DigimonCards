@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上有介绍
@@ -38,6 +39,8 @@ namespace DigimonCard
         public  LoginPage()
         {
             this.InitializeComponent();
+
+            Canvas.SetTop(btnMute, win_height - 75);
 
             smallMove.Begin();
             ConnectedToServer();
@@ -164,6 +167,28 @@ namespace DigimonCard
         private void TEST_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(TestSocketIO));
+        }
+
+        private void isMute(object sender, PointerRoutedEventArgs e)
+        {
+            mediaElement.IsMuted = !mediaElement.IsMuted;
+
+            if (mediaElement.IsMuted)
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/mute.png");
+                btnMute.Source = bitmapImage;
+                mediaElement.Volume = 0;
+                Sound.allVolume = 0;
+            }
+            else
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/mute.png");
+                btnMute.Source = bitmapImage;
+                mediaElement.Volume = 1;
+                Sound.allVolume = 1;
+            }
         }
     }
 

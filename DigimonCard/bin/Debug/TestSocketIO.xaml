@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="DigimonCard.TestSocketIO"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigimonCard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:ConnectionId='1' Name="connectBt" Content="Connect" HorizontalAlignment="Left" Margin="732,172,0,0" VerticalAlignment="Top"                         Width="108"/>
+        <Button Name="disConnectBt" Content="Disconnect" HorizontalAlignment="Left" Margin="732,375,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="sendTbx" AcceptsReturn="True" HorizontalAlignment="Left" Margin="148,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" Height="133"/>
+        <Button x:ConnectionId='2' Name="sendBt" Content="Send" HorizontalAlignment="Left" Margin="581,272,0,0" VerticalAlignment="Top"                     />
+        <TextBlock HorizontalAlignment="Left" Margin="34,134,0,0" TextWrapping="Wrap" Text="JsonString: " FontSize="20" VerticalAlignment="Top"/>
+        <TextBox Name="listenTbx"  HorizontalAlignment="Left" Margin="148,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" Height="145" />
+        <Button x:ConnectionId='3' x:Name="listenBt" Content="Listen" HorizontalAlignment="Left" Margin="732,272,0,0" VerticalAlignment="Top"                        Width="108"/>
+
+    </Grid>
+</Page>
+

@@ -33,17 +33,21 @@ namespace DigimonCard
         public int win_height = (int)Window.Current.Bounds.Height;
 
         private int currentPageTotalRoomNum = 8;
-        private int totalPage = 15;
+        private int totalPage = 10;
 
         public GameLobbyPage()
         {
             this.InitializeComponent();
-            
+
+            mediaElement.Volume = Sound.allVolume;
             Gule.Begin();
             maskPanel.Width = win_width;
             maskPanel.Height = win_height;
+            Canvas.SetTop(btnMute, win_height - 75);
+            Canvas.SetLeft(mylogo, win_width - 110);
 
             Self.roomNum = 0;
+            userName.Text = Self.self.GetName();
 
             for (int i = 0 ; i < 17 ; i++)
                 for (int j = 0 ; j < 3 ; j++)
@@ -77,7 +81,7 @@ namespace DigimonCard
                     roomArea.Children.Add(roomCard[i * 8 + j]);
                 }
             }
-            for (int i = 8; i < 120; i++)
+            for (int i = 8; i < 80; i++)
                 roomCard[i].Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             
             storyboard_appear.Completed += storyboard_artWordBegin;
@@ -285,6 +289,24 @@ namespace DigimonCard
 
         }
 
-
+        private void isMute(object sender, PointerRoutedEventArgs e)
+        {
+            if (Sound.allVolume == 1)
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/mute.png");
+                btnMute.Source = bitmapImage;
+                mediaElement.Volume = 0;
+                Sound.allVolume = 0;
+            }
+            else
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.UriSource = new Uri("ms-appx:///Images/sound_large.png");
+                btnMute.Source = bitmapImage;
+                mediaElement.Volume = 1;
+                Sound.allVolume = 1;
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.dll
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pdb
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\SocketIO4Net.pri
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\Newtonsoft.Json.dll
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\bin\Debug\Newtonsoft.Json.xml
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.dll
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.pdb
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\priconfig.xml
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\layout.resfiles
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\resources.resfiles
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\pri.resfiles
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\LanguageQualifiers.txt
+F:\Users\王永淳\Desktop\DigimonCards\SocketIO4Net\obj\Debug\SocketIO4Net.csprojResolveAssemblyReference.cache

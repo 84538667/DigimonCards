@@ -137,6 +137,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Self.cs" />
+    <Compile Include="Sound.cs" />
     <Compile Include="TestSocketIO.xaml.cs">
       <DependentUpon>TestSocketIO.xaml</DependentUpon>
     </Compile>
@@ -175,6 +176,7 @@
     <Content Include="Images\defendBtn.png" />
     <Content Include="Images\defendBtn_click.png" />
     <Content Include="Images\esc_fullscreen.png" />
+    <Content Include="Images\find.png" />
     <Content Include="Images\fullscreen.png" />
     <Content Include="Images\gameLobby_bkg.jpg" />
     <Content Include="Images\gamepage_bkg.jpg" />
@@ -186,6 +188,7 @@
     <Content Include="Images\newRoomBtn_click.png" />
     <Content Include="Images\overturnBtn.png" />
     <Content Include="Images\overturnBtn_click.png" />
+    <Content Include="Images\pan.png" />
     <Content Include="Images\pause.png" />
     <Content Include="Images\play.png" />
     <Content Include="Images\popScreen.png" />
